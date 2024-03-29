@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e6b42d455715875b54a06ef93cbd6f, type: 3}
+  m_Name: Snake 4
+  m_EditorClassIdentifier:
+  Price: 0
+  Icon: {fileID: 21300000, guid: ef0716d7008421a49adb641a5ffa105b, type: 2}
+  IsRewardVideoPrice: 0
+  _id: Snake 4
+  SnakeMaterial: {fileID: 2100000, guid: e7268155b1300b7428c1eb378a0cb58f, type: 2}
+  HeadMaterial: {fileID: 2100000, guid: e7268155b1300b7428c1eb378a0cb58f, type: 2}

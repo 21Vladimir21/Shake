@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53db1bb4c8554e25dfd525e73fea28fe, type: 3}
+  m_Name: CrusherEnemiesConfig
+  m_EditorClassIdentifier:
+  Enemies:
+  - {fileID: 114032902484667500, guid: f0b57089afb8f814890d875bb8643beb, type: 2}
+  - {fileID: 114392390579420066, guid: ec966d7b90c8baf46ba8c5f779759268, type: 2}
+  - {fileID: 114042103036468231, guid: 654ebc1404cce564c97d351c6aeb38f8, type: 2}

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c8c4a5d00d00b0e6c96ef45fda0f9f, type: 3}
+  m_Name: ISInfo
+  m_EditorClassIdentifier:
+  _data:
+  - Name: IronSource SDK
+    Value: 7.5.1
+  - Name: AdMob
+    Value: 4.3.54.0
+  - Name: AppLovin
+    Value: 4.3.44.3
+  - Name: Chartboost
+    Value: 4.3.19.2
+  - Name: Facebook
+    Value: 4.3.61.0
+  - Name: Fyber
+    Value: 4.3.37.1
+  - Name: Mintegral
+    Value: 4.3.18.0
+  - Name: Pangle
+    Value: 4.3.26.1
+  - Name: Smaato
+    Value: 4.3.10.3
+  - Name: UnityAds
+    Value: 4.3.38.0
+  - Name: Vungle
+    Value: 4.3.37.0

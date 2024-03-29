@@ -1,0 +1,314 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071b7a3eff654246f1af56e14f514f0d, type: 3}
+  m_Name: SnakeCrusherSatelliteConfig
+  m_EditorClassIdentifier:
+  _general:
+    DefaultLevel: 1
+    NodeDistance: 0.1
+    LengthForOneLevel: 0.08
+    WidthForOneLevel: 0.06
+  _firstLevelSettings:
+    ScaleForTheFirstLevel: 1.4
+    LengthForFirstLevel: 2.3
+  _head:
+    MinLookDirectionLerpSpeed: 3
+    MaxLookLerpSpeed: 5
+    LookLerpThreshold: 0.6
+    ScaleSpeed: 0.4
+    ScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.023263492
+        value: 0.2863708
+        inSlope: 1.9982208
+        outSlope: 1.9982208
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ShouldUseOldUpVectorResolver: 0
+  _limbs:
+    ScaleSpeed: 0
+    MinLookLerpSpeed: 0
+    MaxLookLerpSpeed: 0
+    LookLerpThreshold: 0
+    MaxScale: 4
+  _body:
+    Diameter: 0.16
+    NodesDistanceNormalizationDuration: 0.5
+    MaxSnakeScale: 1.8
+    MaxLength: 3
+    BodyNodeScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.9898186
+        inSlope: -0.2839373
+        outSlope: -0.2839373
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.47483796
+        value: 0.85499436
+        inSlope: -0.6828629
+        outSlope: -0.6828629
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.16861351
+        outWeight: 0.115131974
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: -1.4376407
+        outSlope: -1.4376407
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    XBodyScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.9898186
+        inSlope: -0.2839373
+        outSlope: -0.2839373
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.47483796
+        value: 0.85499436
+        inSlope: -0.6828629
+        outSlope: -0.6828629
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.16861351
+        outWeight: 0.115131974
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: -1.4376407
+        outSlope: -1.4376407
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    YBodyScaleCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.9898186
+        inSlope: -0.2839373
+        outSlope: -0.2839373
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.47483796
+        value: 0.85499436
+        inSlope: -0.6828629
+        outSlope: -0.6828629
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.16861351
+        outWeight: 0.115131974
+      - serializedVersion: 3
+        time: 1
+        value: 0.1
+        inSlope: -1.4376407
+        outSlope: -1.4376407
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    BodyEndDampingCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    BodyEndDampingLength: 0
+    EffectDampingLength: 0
+    EffectDumpinngCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    BodyNormalizationDuration: 0.2
+    VerticesInNode: 10
+    UvRect:
+      _minPoint: {x: 0.15, y: 0}
+      _maxPoint: {x: 0.36, y: 1}
+      _patternMap: {fileID: 0}
+    StrictSmoothSettings:
+      _iMin: 0
+      _iMax: 0
+      _oMin: 0
+      _oMax: 0
+    SmoothSettings:
+      _iMin: 0
+      _iMax: 0
+      _oMin: 0
+      _oMax: 0
+  _effect:
+    DefaultSwallowEffectScale: 0.3
+    WigglingDampingCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -0.10708822
+        outSlope: -0.10708822
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.4208374
+        value: 0.9882088
+        inSlope: -0.03483313
+        outSlope: -0.03483313
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0.07447475
+        outSlope: 0.07447475
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.75
+        value: 1
+        inSlope: 0.0003645843
+        outSlope: 0.0003645843
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -4
+        outSlope: -4
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    WigglingDumpingHeadDistance: 0.3
+    WigglingFrequency: 0
+    WigglingAmplitude: 0
+  _eating:
+    PartialBitePercent: 0.8
+    SuctionCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -0.03428239
+        outSlope: -0.03428239
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.23808512
+      - serializedVersion: 3
+        time: 0.22473824
+        value: 1
+        inSlope: 0.056619003
+        outSlope: 0.056619003
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.067332596
+      - serializedVersion: 3
+        time: 0.8062671
+        value: -0.008487582
+        inSlope: 0.043269344
+        outSlope: 0.043269344
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.19584887
+      - serializedVersion: 3
+        time: 1
+        value: 0.0018997192
+        inSlope: -0.02229768
+        outSlope: -0.02229768
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.18761513
+        outWeight: 1
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    MinSuctionSpeed: 5
+    MaxSuctionSpeed: 9.3
+  _growSpeed:
+    minSpeed: 1
+    minNodesCount: 10
+    maxSpeed: 30
+    maxNodesCount: 100
+  _reductionSpeed:
+    minSpeed: 1
+    minNodesCount: 10
+    maxSpeed: 30
+    maxNodesCount: 100
+  _invincibilityAfterSlice: 0.3

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f0904c0229e7427d04fa728d143ff, type: 3}
+  m_Name: EffectsConfig
+  m_EditorClassIdentifier:
+  VFXs:
+  - effect: {fileID: 1375236553504324, guid: f27403fa30bfb3f4481e77531a397f1f, type: 2}
+    key: eat_blue_splash
+  - effect: {fileID: 1515754666789962, guid: 1b2562604e59bc144ba11bac0bce2961, type: 2}
+    key: plus_one
+  - effect: {fileID: 1692655156215157, guid: 3a2c7564cbd4244439994789adee90c9, type: 2}
+    key: eat_green_snake
+  - effect: {fileID: 1331144905866174, guid: f03531eb1cecabe42ae259edd8b2e42f, type: 2}
+    key: good_selection
+  - effect: {fileID: 1308765658246804, guid: 1c652a0c93a3eaa4aafb083a8475984d, type: 2}
+    key: hit
+  - effect: {fileID: 1522660426951993, guid: ebd7d8bc595d9494c9503c8d874d71e2, type: 2}
+    key: get_hat
+  - effect: {fileID: 1455222237079800, guid: 31dfc7e3f62f5b749820113d24f88b69, type: 2}
+    key: gate_pass
+  - effect: {fileID: 1791069666741414, guid: f9a87925a4e8a0f428474c0694f4816e, type: 2}
+    key: bad_selection
+  - effect: {fileID: 1577325692941488, guid: 3d18bbfec50b290489ab66c5c51a1e2c, type: 2}
+    key: head_stars
+  - effect: {fileID: 1207887314781573, guid: 5920185d0543c48479dea8208f2ef857, type: 2}
+    key: bullet_explosion
+  - effect: {fileID: 1507699379144858, guid: e980e899e9a6fa74485f0b119b29cad7, type: 2}
+    key: bullet_trail
+  - effect: {fileID: 1844286939797345, guid: 02574fe6bf56b31449d2b5d6fb9911e9, type: 2}
+    key: money_blast
+  - effect: {fileID: 1717157406339697, guid: a7b5c1a64aeb48b46bcd045cce21e0cf, type: 2}
+    key: finish_confetti
+  - effect: {fileID: 1433343861152917, guid: f32dacca0aa35104d8c46bad76dd6726, type: 2}
+    key: sell_bone
+  - effect: {fileID: 1985858385785123, guid: 78912a999748e3b499b5a70c876204f8, type: 2}
+    key: house_destroy
+  - effect: {fileID: 1596305147352261, guid: 28ae85ab2e93bce48a167d5d496f15a4, type: 2}
+    key: eat_enemy_splash_small
+  - effect: {fileID: 1491559433441232, guid: 1fe885f2694af3a4ea981d1cbd9cb88b, type: 2}
+    key: eat_enemy_splash_medium
+  - effect: {fileID: 1060652949372285, guid: 5c32df695f612004ebe4856836eab5dc, type: 2}
+    key: eat_enemy_splash_big
+  - effect: {fileID: 1930114128297645, guid: a2799435ebf10d343b8b60964e740558, type: 2}
+    key: appear_enemy_small
+  - effect: {fileID: 1930114128297645, guid: a2799435ebf10d343b8b60964e740558, type: 2}
+    key: appear_enemy_medium
+  - effect: {fileID: 1930114128297645, guid: a2799435ebf10d343b8b60964e740558, type: 2}
+    key: appear_enemy_big

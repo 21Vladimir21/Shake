@@ -1,0 +1,206 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d1e66c052b8785a141036850bc54eb, type: 3}
+  m_Name: GameConfig (Backup 16.11)
+  m_EditorClassIdentifier:
+  BaseLevels: {fileID: 0}
+  LoopLevels: {fileID: 0}
+  isDebugMode: 1
+  DebugLevel:
+    m_AssetGUID:
+    m_SubObjectName:
+    m_SubObjectType:
+  _camerasConfig: {fileID: 0}
+  AdsConfig:
+    _noThanksDelay: 5
+    _popupNoThanks: 0
+    _coreDelayBetweenInterstitials: 0
+    _metaDelayBetweenInterstitials: 0
+    _enableAfterLevel: 2
+    _delayBeforeInterstitial: 0
+    _isRewardedAvailable: 0
+    _enableAdsInCoreAfterLevelIndex: 0
+  _offersSettings:
+    _rateUsSettings:
+      _showRateUsOnLevel: 0
+      _showRateUsPeriodAfterClose: 0
+      _starsToStoreReview: 0
+      _maxShowCount: 0
+      _closeGoodRateDelay: 0
+      _closeBadRateDelay: 0
+  _vibrationConfig:
+    _vibrationPlaces: []
+  _notificationConfig: {fileID: 0}
+  _customizationConfig: {fileID: 0}
+  _creatureConfig: {fileID: 0}
+  _creatureMovementConfig: {fileID: 0}
+  _globalEnemiesConfig:
+    _cannotEatTailMaterial: {fileID: 2100000, guid: f1d3b4bfe9fd7794d8e83735c2a5bd8b, type: 2}
+    _canEatTailMaterial: {fileID: 2100000, guid: 9c22f0a71a2d5c14c84f4412f9ba7c97, type: 2}
+    _canEatHeadMaterial: {fileID: 2100000, guid: 9c22f0a71a2d5c14c84f4412f9ba7c97, type: 2}
+    _cannotEatHeadMaterial: {fileID: 2100000, guid: f1d3b4bfe9fd7794d8e83735c2a5bd8b, type: 2}
+    _cannotEatColor: {r: 0.9339623, g: 0.2599235, b: 0.27312365, a: 1}
+    _canEatColor: {r: 0.28920433, g: 0.9150943, b: 0.28920433, a: 1}
+    _enemyCreatureConfig: {fileID: 0}
+    _enemyMovementConfig: {fileID: 0}
+    _widthForTheOneLevel: 0.13
+    _lengthForTheOneLevel: 0.3
+    _maxWidth: 5
+    _maxLength: 15
+    _startEnemyDistance: 25
+    _wigglingDampingCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: -0.10708822
+        outSlope: -0.10708822
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.1416697
+        value: 0.1297043
+        inSlope: 2.9431505
+        outSlope: 2.9431505
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.28572172
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.4208374
+        value: 0.9882088
+        inSlope: -0.03483313
+        outSlope: -0.03483313
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 0.07447475
+        outSlope: 0.07447475
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.75
+        value: 1
+        inSlope: 0.0003645843
+        outSlope: 0.0003645843
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: -4
+        outSlope: -4
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    _wigglingFrequency: 3
+    _wigglingAmplitude: 0.005
+  _finishConfig:
+    _forwardSpeedMultiplier:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    _tailLengthOnCylinder: 2
+    _distanceOffsetToCylinder: 0.5
+    _chestForwardSpeed: 0
+    _reverseMovementSpeed: 8
+    _reverseSpeedDistance: 0.5
+    _reverseSpeedMultiplier:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  _secondFinishConfig:
+    _camerasSettings: []
+    _finishInitialHealthPoints:
+    _maxBirfucationUpgradesCount: 0
+    _minRadius: 0
+    _maxRadius: 0
+    _moveTime: 0
+    _minScale: 0
+    _maxScale: 0
+    _delayBetweenShots: 0
+    _minLevel: 0
+    _maxLevel: 0
+    _minSpeed: 0
+    _maxSpeed: 0
+    _effectDistanceMin: 0
+    _effectDistanceMax: 0
+    _miniGameDisposeDelay: 0
+    _coinsCountForDestroyedPillar: 0
+    _delayAfterHittingPillar: 0
+    _snakeSpeedMultiplierAfterAllBulletsShooted: 0
+    _accelerationSpeed: 0
+    _forwardSpeedMultiplier:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    _bossStatesOnPath: []
+    _delayAfterBossDefeated: 0
+    _bossReward: 0
+    _reduceRadiusFromInitialState: 0
+    _radiusReductionSpeed: 0
+  _miniGamesConfig:
+    _completeScreenSettings:
+      _values: 0000000000000000000000000000000000000000
+      _sign:
+      _type: 0
+    _secondFinishSettings:
+      _values: 0000000000000000000000000000000000000000
+      _sign:
+      _type: 0
+  _timeConfig:
+    _slowMotionTimeScale: 0
+    _slowMotionTransitionSpeed: 0
+  StyleConfig:
+    Styles: []
+    LevelsToNextStyle: 6
+    DebugStyle:
+      m_AssetGUID:
+      m_SubObjectName:
+      m_SubObjectType:
+  ChestRewards: 250
+  _delayBeforePopupShow: 0
+  _delayMenRegeneratedPopupShowInLevels: 0
+  BaseCrusherLevels: {fileID: 0}
+  LoopCrusherLevels: {fileID: 0}
+  CrusherBaseLevel: {fileID: 0}
+  _crusherCamerasConfig: {fileID: 0}
+  _crusherCreatureMovementConfig: {fileID: 0}
+  _crusherCreatureConfig: {fileID: 0}
+  _crusherSatelliteCreatureConfig: {fileID: 0}
+  _openMetaLevelIndex: 0
+  _exclamationMarkRecoveredPercent: 0
+  _farDistanceToNearEnemy: 0
+  _otherSettingsConfig:
+    _iOSSupportFormUrl:
+    _androidSupportFormUrl:

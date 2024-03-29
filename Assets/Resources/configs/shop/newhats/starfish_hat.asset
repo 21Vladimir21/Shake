@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc44bb0c7b2f8447828c128195100ea4, type: 3}
+  m_Name: starfish_hat
+  m_EditorClassIdentifier:
+  Price: 0
+  Icon: {fileID: 21300000, guid: cf6b19f9664b9b64b8b65652088f2b94, type: 2}
+  IsRewardVideoPrice: 0
+  _id: starfish_hat
+  Prefab: {fileID: 1365736794559746, guid: 2dbd3d5c5a32dc042b4afcee0b7bb72d, type: 2}
+  _hatLevelPrefab: {fileID: 1212314701956876, guid: 9be7892252ecd0b4082488acc70a6ff4, type: 2}
+  _type: 7

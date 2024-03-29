@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8d30f44272b5e9cb72f9add1141ff4, type: 3}
+  m_Name: CrusherAssetLinksConfig
+  m_EditorClassIdentifier:
+  Chest: {fileID: 114030348290459862, guid: edbdf30ef8fb6f341b0bf7852d18507d, type: 2}

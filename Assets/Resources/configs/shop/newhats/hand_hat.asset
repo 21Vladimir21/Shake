@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc44bb0c7b2f8447828c128195100ea4, type: 3}
+  m_Name: hand_hat
+  m_EditorClassIdentifier:
+  Price: 0
+  Icon: {fileID: 21300000, guid: 3f991e5ba160960419812163bfdb4697, type: 2}
+  IsRewardVideoPrice: 0
+  _id: hand_hat
+  Prefab: {fileID: 1875427842811473, guid: d3a0f9ff233cdce44a608edf51f18c81, type: 2}
+  _hatLevelPrefab: {fileID: 1949106795024557, guid: 76071f7da57f1744bba661d0021c14ab, type: 2}
+  _type: 8

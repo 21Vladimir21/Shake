@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be008be0c2bdc6f8a0794a8ab636aa7, type: 3}
+  m_Name: CrusherUpgradesConfig
+  m_EditorClassIdentifier:
+  Settings:
+  - Type: 0
+    PriceType: 2
+    BaseValue: 5.2
+    AddCount: 0.1
+    Prices: fa0000002c010000f40100008a020000ee02000052030000b60300007e040000e204000046050000dc0500003a070000d0070000ca080000f6090000
+    MaxLevel: 15
+  - Type: 1
+    PriceType: 2
+    BaseValue: 20
+    AddCount: 15
+    Prices: 640000005e01000001040000fc080000480d0000301100000019000034210000b8240000a0280000d4300000bc340000983a0000803e0000384a0000
+    MaxLevel: 15
+  - Type: 2
+    PriceType: 2
+    BaseValue: 1
+    AddCount: -0.04
+    Prices: fa000000180100005e010000c20100005203000065040000460500000e0600009e07000066080000f6090000860b00004e0c0000de0d0000420e0000
+    MaxLevel: 15
+  MainGameLengthToCapacityMultiplier: 0

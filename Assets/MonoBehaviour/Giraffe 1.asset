@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63ce58eaf56da855133582ca17f67e6, type: 3}
+  m_Name: Giraffe 1
+  m_EditorClassIdentifier:
+  Price: 100
+  Icon: {fileID: 21300000, guid: 84268ee99d38b1f4fa5874e18269f387, type: 2}
+  IsRewardVideoPrice: 0
+  _id: Giraffe 1
+  _type: 5
+  _materialsConfig:
+  - _materials:
+    - {fileID: 2100000, guid: 05f8fe70ae7c6564d847ac8215d9ec18, type: 2}
+    _type: 1
+    _materialsSlotsIndices:
+  - _materials:
+    - {fileID: 2100000, guid: cd660e8af422e4c4b889f5b6a05974ae, type: 2}
+    _type: 0
+    _materialsSlotsIndices:

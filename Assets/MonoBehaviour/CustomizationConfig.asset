@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746dff826420b97820cff26c594c8ab3, type: 3}
+  m_Name: CustomizationConfig
+  m_EditorClassIdentifier:
+  _animals:
+  - _creatureType: 0
+    _creaturePrefab: {fileID: 1665485249966842, guid: 7f91699433704df4d8d3e1437e84b63f, type: 2}
+    _crusherCreature: {fileID: 1496081158383655, guid: 9ecd35a5cab0dba4699776eaecb562e2, type: 2}
+    _crusherSatellite: {fileID: 1280560681995430, guid: dae2ad634c2409446a415322f7c9392f, type: 2}
+    _creatureConfig: {fileID: 11400000, guid: 2478506807600e64b87aac8307c832bb, type: 2}
+    _crusherCreatureConfig: {fileID: 11400000, guid: 2b39f29375bcd3d408f5ce22e3b0b31e, type: 2}
+    _creatureMovementConfig: {fileID: 11400000, guid: 2275d3944d0285f419794295e91de665, type: 2}
+    _crusherCreatureMovementConfig: {fileID: 11400000, guid: 5d42e933f8ed9bc44bee4e955dc1735d, type: 2}
+    _crusherSatelliteCreatureConfig: {fileID: 11400000, guid: 65c7ce7d65cd2ff4f9612901061c62bc, type: 2}
+  - _creatureType: 1
+    _creaturePrefab: {fileID: 1784532372399893, guid: 8f7fcddbbf7903b41ae1716ad1a697ba, type: 2}
+    _crusherCreature: {fileID: 1114482315053753, guid: ca45a00d7a738154c940fc7c380cae23, type: 2}
+    _crusherSatellite: {fileID: 1451581388648320, guid: a728657d95f43194da2ca3811cd03591, type: 2}
+    _creatureConfig: {fileID: 11400000, guid: d4494be9b095397478af57f2516fca56, type: 2}
+    _crusherCreatureConfig: {fileID: 11400000, guid: 99c8040a25198e343936a65fa9410d12, type: 2}
+    _creatureMovementConfig: {fileID: 11400000, guid: ac9b5b0e8fe14214b97e07f92eb391e9, type: 2}
+    _crusherCreatureMovementConfig: {fileID: 11400000, guid: f120f1f8c241df64f852acb6b1e2d81d, type: 2}
+    _crusherSatelliteCreatureConfig: {fileID: 11400000, guid: 20d2cd5fd62057543bb4bde601ca4055, type: 2}
+  - _creatureType: 2
+    _creaturePrefab: {fileID: 1304811560421459, guid: 592cd7eec0886194f9dcdcd0237f3e3a, type: 2}
+    _crusherCreature: {fileID: 1599960865097579, guid: 4294478f40b5d8e4db9307e6b159d4ca, type: 2}
+    _crusherSatellite: {fileID: 1549064908569160, guid: 3fe6fed9251efe44f9bc80168f5dc174, type: 2}
+    _creatureConfig: {fileID: 11400000, guid: 38e37e9917d7fc54d94580296dd97ed3, type: 2}
+    _crusherCreatureConfig: {fileID: 11400000, guid: 0d82ee16dd0ab1f4da2c76a188972057, type: 2}
+    _creatureMovementConfig: {fileID: 11400000, guid: 3287ede41d7d83e4e9a89c062b169e19, type: 2}
+    _crusherCreatureMovementConfig: {fileID: 11400000, guid: 204e15f2bc5ded946ba39bac44481da0, type: 2}
+    _crusherSatelliteCreatureConfig: {fileID: 11400000, guid: 8ede08e0b693fba4f9abc3f10fca3489, type: 2}
+  - _creatureType: 4
+    _creaturePrefab: {fileID: 1133806612568226, guid: 23eefb02a7523644997976d1386b7db0, type: 2}
+    _crusherCreature: {fileID: 1466468306369119, guid: c9114e1ef1758a74a8bdbef282a1d2cc, type: 2}
+    _crusherSatellite: {fileID: 1851759931986215, guid: 41868a6fd425cc045b257910a8ca9d94, type: 2}
+    _creatureConfig: {fileID: 11400000, guid: a44c94054d3e04b479f87a599d697197, type: 2}
+    _crusherCreatureConfig: {fileID: 11400000, guid: d7ed2055b134fa24489df5823be14b85, type: 2}
+    _creatureMovementConfig: {fileID: 11400000, guid: b4cbc9b0323460442936daebb6564490, type: 2}
+    _crusherCreatureMovementConfig: {fileID: 11400000, guid: b7db3539801f5174dbfa13b3714597a3, type: 2}
+    _crusherSatelliteCreatureConfig: {fileID: 11400000, guid: c69c41b44903a124f869859f425b8968, type: 2}
+  - _creatureType: 3
+    _creaturePrefab: {fileID: 1068219966886784, guid: 70ee30659126305479b400dfa692a165, type: 2}
+    _crusherCreature: {fileID: 1385750264935929, guid: 293afc6feafd6064abc441664cc85cb2, type: 2}
+    _crusherSatellite: {fileID: 1129170093613396, guid: 0c794f3943f2dc544ab217a11074a3b0, type: 2}
+    _creatureConfig: {fileID: 11400000, guid: 2ddee1788c01f814ba058d0e1b49ed74, type: 2}
+    _crusherCreatureConfig: {fileID: 11400000, guid: 535bd3aedfce31f4e9b16d07353f4b26, type: 2}
+    _creatureMovementConfig: {fileID: 11400000, guid: 5ba7f03fda2d7624a80a9f2f8ed59ac3, type: 2}
+    _crusherCreatureMovementConfig: {fileID: 11400000, guid: 45669334a41693c4791afe570747b87a, type: 2}
+    _crusherSatelliteCreatureConfig: {fileID: 11400000, guid: 64b00a2d3f294914e8c8fe940dd8a694, type: 2}
+  - _creatureType: 5
+    _creaturePrefab: {fileID: 1143400634397945, guid: eae93e67bda1d78469d2cb727fa74621, type: 2}
+    _crusherCreature: {fileID: 1047254221534606, guid: 7ad8e4392dff261478cbc18926970478, type: 2}
+    _crusherSatellite: {fileID: 1389447186357897, guid: 4edf06333d7eedc428250f40bfda80b5, type: 2}
+    _creatureConfig: {fileID: 11400000, guid: 31802cc0202f7894cb09ac6ca2963dcf, type: 2}
+    _crusherCreatureConfig: {fileID: 11400000, guid: 4c836e8ff07c30c40946f4c4459a3e11, type: 2}
+    _creatureMovementConfig: {fileID: 11400000, guid: ffdd95f1ddd497343a3565dd33da4e7d, type: 2}
+    _crusherCreatureMovementConfig: {fileID: 11400000, guid: 6deedcebe28df4d40bf52279b3b98394, type: 2}
+    _crusherSatelliteCreatureConfig: {fileID: 11400000, guid: 02296b8a06e7a56419cfb781fb0d2df6, type: 2}
+  - _creatureType: 6
+    _creaturePrefab: {fileID: 1995117909038558, guid: bbd932c0a0d5e814da785fc19793dba6, type: 2}
+    _crusherCreature: {fileID: 1362347716131767, guid: 31c9b4d4d159dac42b609e47dcb0f186, type: 2}
+    _crusherSatellite: {fileID: 1245484103654626, guid: 30b952b47241dce42bdc858faf01d354, type: 2}
+    _creatureConfig: {fileID: 11400000, guid: 680229707e3506a49af3340041a8bb6e, type: 2}
+    _crusherCreatureConfig: {fileID: 11400000, guid: 31139129b4a1a79468167c5853eaaf37, type: 2}
+    _creatureMovementConfig: {fileID: 11400000, guid: 8616b4ca45561e645a30740e06d288e6, type: 2}
+    _crusherCreatureMovementConfig: {fileID: 11400000, guid: 209c91d453b62e44b9a5a9368044af9f, type: 2}
+    _crusherSatelliteCreatureConfig: {fileID: 11400000, guid: dd5ef939cf247d24ab9aa7ecf5f5b4c6, type: 2}
+  - _creatureType: 7
+    _creaturePrefab: {fileID: 1504485949253305, guid: 60f878c4912e9244e8af830a2be30a47, type: 2}
+    _crusherCreature: {fileID: 1318520974482957, guid: deaf739e7a417924fbfff2886cd8b74d, type: 2}
+    _crusherSatellite: {fileID: 1858772839171579, guid: 3e75a3643aef37847a615e1aed80dc80, type: 2}
+    _creatureConfig: {fileID: 11400000, guid: 50e592ba34004354c8ad070b86b2a8d7, type: 2}
+    _crusherCreatureConfig: {fileID: 11400000, guid: 7cf6d147995be194d9ecc44abbb66d0d, type: 2}
+    _creatureMovementConfig: {fileID: 11400000, guid: 768d3d6aace2dcc4eb90b88134383088, type: 2}
+    _crusherCreatureMovementConfig: {fileID: 11400000, guid: 39e1476b21671f4449e019259f57d92b, type: 2}
+    _crusherSatelliteCreatureConfig: {fileID: 11400000, guid: a654e1cdc1bdc7f47bc9cb6dc4e5dca1, type: 2}
+  - _creatureType: 8
+    _creaturePrefab: {fileID: 1086520232511333, guid: 8fb6c93af944c7542aef0c69ac809cbe, type: 2}
+    _crusherCreature: {fileID: 1911942658899118, guid: b92024f9c7513f34a8dbf224925a61af, type: 2}
+    _crusherSatellite: {fileID: 1587319841392256, guid: 48bb72c0e7b1e004794168523baf7d80, type: 2}
+    _creatureConfig: {fileID: 11400000, guid: a68c1c07d127bbd4fa7b63d4dc693ee3, type: 2}
+    _crusherCreatureConfig: {fileID: 11400000, guid: 0e5be5039838b274caf0a1afaa70c495, type: 2}
+    _creatureMovementConfig: {fileID: 11400000, guid: e60a969b6c7efdf4e9557c98607d35d4, type: 2}
+    _crusherCreatureMovementConfig: {fileID: 11400000, guid: c322a9d31c752374d95e492c8aa157ea, type: 2}
+    _crusherSatelliteCreatureConfig: {fileID: 11400000, guid: 295a1f96c042c4342861f98b7f676a3f, type: 2}

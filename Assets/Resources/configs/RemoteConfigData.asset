@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec1bbed5e8b4fb79503b5c3b45ef798, type: 3}
+  m_Name: RemoteConfigData
+  m_EditorClassIdentifier:
+  _test_name:
+  _test_group_name:
+  _base_inter_timer: 0
+  _inter_timer_by_level_index_level_step: 0
+  _inter_timer_by_level_index_time_values:
+    _timerValues:
+  _inter_timer_by_inter_count_target_count: 0
+  _inter_timer_by_inter_count_timer_after_target: 0
+  _meta_enter_level: 0

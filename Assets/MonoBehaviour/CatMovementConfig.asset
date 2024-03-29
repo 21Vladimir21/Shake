@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cc828a0beccf1e14bce3cc94ed84b9, type: 3}
+  m_Name: CatMovementConfig
+  m_EditorClassIdentifier:
+  _roadWidth: 3.9
+  _raycastHeightOffset: 1
+  _borderOffset: 0.28
+  _groundDistance: 0.1
+  _gravityAcceleration: 9.81
+  _forwardSpeed: 5
+  _swallowSpeed: 5
+  _pushCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0041658804
+      value: 0.9889876
+      inSlope: 0.14979094
+      outSlope: 0.14979094
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.49632397
+    - serializedVersion: 3
+      time: 0.09863743
+      value: 0.44647652
+      inSlope: -1.4934596
+      outSlope: -1.4934596
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18750483
+      outWeight: 0.36186972
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.12386969
+      outSlope: -0.12386969
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.9668787
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _pushDuration: 0.7
+  _backwardPushStrength: 1400
+  _sidePushStrength: 2
+  _shouldAdjustHeightWithGrowing: 1
+  _adjustHeightSettings:
+    _iMin: 1
+    _iMax: 30
+    _oMin: 0.2
+    _oMax: 0.3
+  _crusherHeightSettings:
+    _iMin: 1
+    _iMax: 30
+    _oMin: 0.3
+    _oMax: 0.5
+  _normalizeFinishEffectsSpeed: 3
+  <TorqueSpeed>k__BackingField: 3

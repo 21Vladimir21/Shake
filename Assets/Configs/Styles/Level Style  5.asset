@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c1508692a2066b67fe8e3193ba07c69, type: 3}
+  m_Name: Level Style  5
+  m_EditorClassIdentifier:
+  Icon: {fileID: 21300000, guid: cdfa9d42c9ac9624290b726ca3c62f16, type: 2}
+  NextIcon: {fileID: 21300000, guid: d9b2e4b4377801b44bbab29b01db9094, type: 2}
+  SkyBox: {fileID: 2100000, guid: 07fcc56675524764a9c2aaa43952ae7e, type: 2}
+  BackgroundSprite: {fileID: 0}
+  IsSpriteBackgroundUsed: 0
+  WaterMaterial: {fileID: 2100000, guid: a60a6cfbb5e0b704180751d5b347c348, type: 2}
+  WaterEffect: {fileID: 1632044234649556, guid: 1f1fdf08d6864ee4d94eefb41aee8a07, type: 2}
+  RoadBlockMaterial:
+  - {fileID: 2100000, guid: 0bdf82ea31c1f114f89dc0bc2aba00e8, type: 2}
+  - {fileID: 2100000, guid: 821adcf9e1b57864988c2b86af60050a, type: 2}
+  IslandSegmentMaterial:
+  - {fileID: 2100000, guid: 0bdf82ea31c1f114f89dc0bc2aba00e8, type: 2}
+  - {fileID: 2100000, guid: d7470f380de4dcf49adfe006a6fb3e24, type: 2}
+  FinisBlockhMaterial:
+    InactiveMaterial: {fileID: 2100000, guid: 920b23cab0395234abcf488414fc2bac, type: 2}
+    CircleMaterials:
+    - {fileID: 2100000, guid: d2ee8b4e6dba8bc42aec9e3d06b59db9, type: 2}
+    - {fileID: 2100000, guid: 01948e34df6426140870644cb15788d6, type: 2}
+    - {fileID: 2100000, guid: bdbeee388abf159478c0f3b722a6749e, type: 2}
+    - {fileID: 2100000, guid: f995d3e908129134ea4f9a57b8367f4b, type: 2}
+    - {fileID: 2100000, guid: bdab4441046c5a74e97a98d9b3096fed, type: 2}
+    - {fileID: 2100000, guid: 9dc73e4a164f1d3408717d3272f5fe9d, type: 2}
+  IsFogEnabled: 1
+  FogColor:
+    r: 0.9372549
+    g: 0.48235294
+    b: 1
+    a: 1
+  FogStart: 40
+  FogEnd: 80

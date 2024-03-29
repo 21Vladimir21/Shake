@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5478335faf6cb84549c7c49039fa170, type: 3}
+  m_Name: CreaturesPreviewConfig
+  m_EditorClassIdentifier:
+  _creaturesList:
+  - _id: Cat 1
+    _creature: {fileID: 1521212478739842, guid: 506578cfdabec0f4c996405c043f0d8a, type: 2}
+    _materialsConfig:
+    - _materials: []
+      _type: 1
+      _materialsSlotsIndices:
+  - _id: Corgi 1
+    _creature: {fileID: 1345446145437683, guid: b4f54e8bbe7fe3d41964e8373c705e27, type: 2}
+    _materialsConfig:
+    - _materials: []
+      _type: 0
+      _materialsSlotsIndices:
+  - _id: Pig 1
+    _creature: {fileID: 1407181079091184, guid: 97a9db9843cfd5c48ae226571ae908c5, type: 2}
+    _materialsConfig:
+    - _materials: []
+      _type: 0
+      _materialsSlotsIndices: 00000000
+  - _id: Rabbit 1
+    _creature: {fileID: 1261702279411424, guid: b2c30eee61d7455478895cf7b45dd61d, type: 2}
+    _materialsConfig:
+    - _materials: []
+      _type: 0
+      _materialsSlotsIndices: 00000000
+  - _id: Giraffe 1
+    _creature: {fileID: 1975586468348566, guid: e26c463ebea7a9045807df4096be9c4d, type: 2}
+    _materialsConfig:
+    - _materials: []
+      _type: 0
+      _materialsSlotsIndices: 00000000
+  - _id: Elephant 1
+    _creature: {fileID: 1674590739050808, guid: 4631fd9431d4d2142bdb0e65a92a6d28, type: 2}
+    _materialsConfig:
+    - _materials: []
+      _type: 0
+      _materialsSlotsIndices: 00000000
+  - _id: Unicorn 1
+    _creature: {fileID: 1505086004688316, guid: d905c75003e506c47ac3ebe3784b436f, type: 2}
+    _materialsConfig:
+    - _materials: []
+      _type: 0
+      _materialsSlotsIndices:
+  - _id: Lizard 1
+    _creature: {fileID: 1861448728690490, guid: 5dd5938f5de57b74abc9ef7c714bab86, type: 2}
+    _materialsConfig:
+    - _materials: []
+      _type: 1
+      _materialsSlotsIndices:
+  - _id: Snake 2
+    _creature: {fileID: 1370961194291969, guid: 440c10439aab7db44aaf7fee6a1854eb, type: 2}
+    _materialsConfig:
+    - _materials:
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 7ff874c3e77bb4b47a5745e23584209f, type: 2}
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 7ff874c3e77bb4b47a5745e23584209f, type: 2}
+      _type: 1
+      _materialsSlotsIndices: 0100000003000000
+  - _id: Snake 3
+    _creature: {fileID: 1370961194291969, guid: 440c10439aab7db44aaf7fee6a1854eb, type: 2}
+    _materialsConfig:
+    - _materials:
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: f29442c66c3df6940975b3efb3f5b64b, type: 2}
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: f29442c66c3df6940975b3efb3f5b64b, type: 2}
+      _type: 1
+      _materialsSlotsIndices: 0100000003000000
+  - _id: Snake 4
+    _creature: {fileID: 1370961194291969, guid: 440c10439aab7db44aaf7fee6a1854eb, type: 2}
+    _materialsConfig:
+    - _materials:
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: e7268155b1300b7428c1eb378a0cb58f, type: 2}
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: e7268155b1300b7428c1eb378a0cb58f, type: 2}
+      _type: 1
+      _materialsSlotsIndices: 0100000003000000
+  - _id: Snake 5
+    _creature: {fileID: 1370961194291969, guid: 440c10439aab7db44aaf7fee6a1854eb, type: 2}
+    _materialsConfig:
+    - _materials:
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 4d66b401a916b1249bb6b8c0b5281d27, type: 2}
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 4d66b401a916b1249bb6b8c0b5281d27, type: 2}
+      _type: 1
+      _materialsSlotsIndices: 0100000003000000
+  - _id: Snake 6
+    _creature: {fileID: 1370961194291969, guid: 440c10439aab7db44aaf7fee6a1854eb, type: 2}
+    _materialsConfig:
+    - _materials:
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 4bd7c6c6e4b28bc4188edee1ddfe9496, type: 2}
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 4bd7c6c6e4b28bc4188edee1ddfe9496, type: 2}
+      _type: 1
+      _materialsSlotsIndices: 0100000003000000
+  - _id: Snake 7
+    _creature: {fileID: 1370961194291969, guid: 440c10439aab7db44aaf7fee6a1854eb, type: 2}
+    _materialsConfig:
+    - _materials:
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 0d158c9b03dff4c4da4e146b74583155, type: 2}
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 0d158c9b03dff4c4da4e146b74583155, type: 2}
+      _type: 1
+      _materialsSlotsIndices: 0100000003000000
+  - _id: Snake 8
+    _creature: {fileID: 1370961194291969, guid: 440c10439aab7db44aaf7fee6a1854eb, type: 2}
+    _materialsConfig:
+    - _materials:
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: a392c4af7740d304bace5e0373592ef8, type: 2}
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: a392c4af7740d304bace5e0373592ef8, type: 2}
+      _type: 1
+      _materialsSlotsIndices: 0100000003000000
+  - _id: Snake 9
+    _creature: {fileID: 1370961194291969, guid: 440c10439aab7db44aaf7fee6a1854eb, type: 2}
+    _materialsConfig:
+    - _materials:
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 3495b3bc74c159845bec2b6c0f308e59, type: 2}
+      - {fileID: 2100000, guid: 54568df04da3d0448bbe290440b0f3d8, type: 2}
+      - {fileID: 2100000, guid: 3495b3bc74c159845bec2b6c0f308e59, type: 2}
+      _type: 1
+      _materialsSlotsIndices: 0100000003000000

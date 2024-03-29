@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc44bb0c7b2f8447828c128195100ea4, type: 3}
+  m_Name: crown_hat
+  m_EditorClassIdentifier:
+  Price: 0
+  Icon: {fileID: 21300000, guid: 2f30c686d4d819b4a9e836408dddb4bb, type: 2}
+  IsRewardVideoPrice: 0
+  _id: crown_hat
+  Prefab: {fileID: 1993614229097933, guid: c46c452047e0f4f48aff4e503c1f849b, type: 2}
+  _hatLevelPrefab: {fileID: 1809371195995367, guid: e8b0e81536ab64f43aa6f087b2bda2ac, type: 2}
+  _type: 3
