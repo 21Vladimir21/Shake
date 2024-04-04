@@ -27,11 +27,11 @@ public class LevelSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        ServiceLocator.SetEndCanvas(_endCanvas);
-        _currentLvlNum = DataManager.Instance.CurrentLevel;
-        if (_currentLvlNum > 40)
-            _currentLvlNum = Random.Range(30, 40);
-        SpawnLevel(_currentLvlNum);
+        // ServiceLocator.SetEndCanvas(_endCanvas);
+        // _currentLvlNum = DataManager.Instance.CurrentLevel;
+        // if (_currentLvlNum > 40)
+        //     _currentLvlNum = Random.Range(30, 40);
+        // SpawnLevel(_currentLvlNum);
     }
 
     private void Start()

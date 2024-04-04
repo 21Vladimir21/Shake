@@ -97,7 +97,7 @@ public class PlayerMover : MonoBehaviour
     private void Move()
     {
         var moveDirection = GetMoveDirection();
-        _playerAnimator.TurningDirection = GetXDirection();
+        // _playerAnimator.TurningDirection = GetXDirection();
         _rigidbody.velocity = new Vector3(_insideBeam ? 0 : moveDirection.x, 0f + YVelocityOffset, moveDirection.z);
     }
 
@@ -118,8 +118,15 @@ public class PlayerMover : MonoBehaviour
     public void Push(float pushPower)
     {
         transform.DOMoveZ(transform.position.z - pushPower, 0.5f);
-        _playerAnimator.AnimateObstacleFall();
+        // _playerAnimator.AnimateObstacleFall();
         Block(true);
+        StartCoroutine(WaitToUnlock());
+    }
+
+    private IEnumerator WaitToUnlock()
+    {
+        yield return new WaitForSeconds(1f);
+        Block(false);
     }
 
     public void Block(bool value)
@@ -129,8 +136,8 @@ public class PlayerMover : MonoBehaviour
 
      public Tween MoveTo(Vector3 target, float moveDuration)
      {
-         _playerAnimator.SetRunningTrigger();
-        _playerAnimator.SetPlayerAnimationState(PlayerAnimationState.Other);
+         // _playerAnimator.SetRunningTrigger();
+        // _playerAnimator.SetPlayerAnimationState(PlayerAnimationState.Other);
         return _rigidbody.DOMove(target, moveDuration).SetEase(Ease.Linear);
                           //.OnComplete(() => _playerAnimator.SetPlayerAnimationState(PlayerAnimationState.Idle));
      }
@@ -146,7 +153,7 @@ public class PlayerMover : MonoBehaviour
         _isJumping = false;
         _isLanded = true;
         Block(false);
-        _playerAnimator.SetRunningTrigger();
+        // _playerAnimator.SetRunningTrigger();
     }
     
     public void ChangeRunningSpeedBy(float value)

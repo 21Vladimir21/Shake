@@ -81,17 +81,17 @@ public class StartPanel : MonoBehaviour, IPointerDownHandler
     private void ShowStat()
     {
         _moneyCounter.SetActive(true);
-        _levelCounter.SetActive(true);
+        // _levelCounter.SetActive(true);
     }
 
     public void HideLevel()
     {
-        _levelCounter.SetActive(false);
+        // _levelCounter.SetActive(false);
     }
 
     public void HideStat()
     {
         _moneyCounter.SetActive(false);
-        _levelCounter.SetActive(false);
+        // _levelCounter.SetActive(false);
     }
 }
