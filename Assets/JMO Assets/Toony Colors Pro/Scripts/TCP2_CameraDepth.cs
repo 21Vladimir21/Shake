@@ -28,10 +28,10 @@ namespace ToonyColorsPro
 			void SetCameraDepth()
 			{
 				var cam = GetComponent<Camera>();
-				if (RenderDepth)
-					cam.depthTextureMode |= DepthTextureMode.Depth;
-				else
-					cam.depthTextureMode &= ~DepthTextureMode.Depth;
+				// if (RenderDepth)
+					// cam.depthTextureMode |= DepthTextureMode.Depth;
+				// else
+					// cam.depthTextureMode &= ~DepthTextureMode.Depth;
 			}
 		}
 	}
