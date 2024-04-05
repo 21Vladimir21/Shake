@@ -8,12 +8,11 @@ public class PlayerPartsIncreaser : MonoBehaviour
     [SerializeField] private TMP_Text levelText;
     
     private Player _player;
-    private PlayerSkinSwitcher _skinSwitcher;
+    private float _lastLevel;
 
     private void Awake()
     {
         _player = GetComponent<Player>();
-        _skinSwitcher = GetComponent<PlayerSkinSwitcher>();
     }
 
     private void OnEnable()
@@ -31,10 +30,13 @@ public class PlayerPartsIncreaser : MonoBehaviour
     {
 
         levelText.text = currentHealth.ToString();
+        var levelDifference = currentHealth - _lastLevel;
+        Debug.Log(levelDifference);
         GameManager.Instance.ChangeSliderValue(Mathf.Lerp(0, 1, currentHealth / maxHealth));
-            scaleBody.localScale += Vector3.one * 0.1f;
+            scaleBody.localScale += Vector3.one * (levelDifference * 0.05f);
 
         // TODO: Тут нужно сделать обновление UI для уровня змеи  и её размера 
+        _lastLevel = currentHealth;
     }
 
 

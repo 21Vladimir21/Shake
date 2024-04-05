@@ -1233,9 +1233,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d369ec75ba4685bac210fbe945da14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotatableHead: {fileID: 8955583206894887698}
   _runningSpeed: 200
   _runningBeamSpeed: 300
-  _horizontalSpeed: 300
+  _horizontalSpeed: 500
   _jumpPower: 100
   _jumpHeight: 100
   _jumpTime: 100
@@ -1386,9 +1387,9 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
-  m_Height: 0.88
-  m_Direction: 2
+  m_Radius: 0.26
+  m_Height: 0.91
+  m_Direction: 1
   m_Center: {x: 0, y: 0.13, z: 0.28}
 --- !u!114 &8395915402963185159
 MonoBehaviour:

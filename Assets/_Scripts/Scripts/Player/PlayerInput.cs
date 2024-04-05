@@ -37,7 +37,7 @@ public class PlayerInput : MonoBehaviour
                 return;
             float dragDelta = Input.mousePosition.x - _dragStartPosition.x;
             _movementDirection = new Vector3(dragDelta * InputSensMultiplier, 0f, 0f);
-            _dragStartPosition.x = Mathf.Lerp(_dragStartPosition.x, Input.mousePosition.x, 1f * Time.deltaTime);
+            _dragStartPosition.x = Mathf.Lerp(_dragStartPosition.x, Input.mousePosition.x, 3f * Time.deltaTime);
         }
         
         if (Input.GetMouseButtonUp(0))
@@ -50,9 +50,9 @@ public class PlayerInput : MonoBehaviour
     public float GetXDirection()
     {
         float targetXPosition = _movementDirection.x;
-        if (targetXPosition >= -1f && targetXPosition <= 1f)
+        if (targetXPosition >= -1.5f && targetXPosition <= 1.5f)
             return targetXPosition;
-        var targetXPositionClamped = Mathf.Clamp(targetXPosition / Screen.width, -1f, 1f);
+        var targetXPositionClamped = Mathf.Clamp(targetXPosition / Screen.width, -1.5f, 1.5f);
         return targetXPositionClamped;
     }
 

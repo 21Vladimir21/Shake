@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerMover : MonoBehaviour
 {
+    [SerializeField] private Transform rotatableHead;
+    
+    
     [SerializeField] private float _runningSpeed;
     [SerializeField] private float _runningBeamSpeed = 300f;
     private float _startingSpeed;
@@ -99,14 +102,20 @@ public class PlayerMover : MonoBehaviour
         var moveDirection = GetMoveDirection();
         // _playerAnimator.TurningDirection = GetXDirection();
         _rigidbody.velocity = new Vector3(_insideBeam ? 0 : moveDirection.x, 0f + YVelocityOffset, moveDirection.z);
+        
+        if (moveDirection != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            rotatableHead.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.fixedDeltaTime * 10);
+        }
     }
 
     private Vector3 GetMoveDirection()
     {
         Vector3 frontDirection = Vector3.forward;
         Vector3 horizontalDirection = new Vector3(_playerInput.GetXDirection(), 0f, 0f);
-        frontDirection = frontDirection * _runningSpeed * Time.fixedDeltaTime;
-        horizontalDirection = horizontalDirection * _horizontalSpeed * Time.fixedDeltaTime;
+        frontDirection *= _runningSpeed * Time.fixedDeltaTime;
+        horizontalDirection *= _horizontalSpeed * Time.fixedDeltaTime;
         return horizontalDirection + frontDirection;
     }
 

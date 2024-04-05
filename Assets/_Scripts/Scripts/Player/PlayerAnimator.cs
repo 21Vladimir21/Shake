@@ -139,14 +139,14 @@ public class PlayerAnimator : MonoBehaviour
             SetRunId(1);
             _animationState = PlayerAnimationState.Running;
         }
-        if (_runID == 1 && GameManager.Instance.ButtSize >= 0.15)
-        {
-            SetRunId(2);
-        }
-        else if (_runID == 2 && GameManager.Instance.ButtSize <= 0.15)
-        {
-            SetRunId(1);
-        }
+        // if (_runID == 1 && GameManager.Instance.ButtSize >= 0.15)
+        // {
+        //     SetRunId(2);
+        // }
+        // else if (_runID == 2 && GameManager.Instance.ButtSize <= 0.15)
+        // {
+        //     SetRunId(1);
+        // }
     }
 
     private void SetRunId(int runID)
