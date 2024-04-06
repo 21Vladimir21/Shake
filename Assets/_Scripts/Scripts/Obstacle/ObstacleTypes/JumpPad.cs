@@ -10,7 +10,6 @@ public class JumpPad : MonoBehaviour, IObstacle
     public void AffectPlayer(Player player)
     {
         StartCoroutine(PlayAnimation());
-        player.PlayerAnimator.GroundedOnPad();
         player.PadJumpTo(_jumpFinalPoint.transform, true);
         SoundManager.Instance.PlaySound(_padSound);
     }

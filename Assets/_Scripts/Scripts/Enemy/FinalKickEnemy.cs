@@ -94,7 +94,6 @@ public class FinalKickEnemy : MonoBehaviour, IEnemy
     {
         _ragdollController.MakePhysical();
         _playerFat = player.Health > 10 ? player.Health : 10;
-        player.PlayerAnimator.PlayerOnGround();
         _playerPushPower = _playerStats.PushStrength;
         //_camera.Priority = 100;
         Camera.Instance.ChangeTargetToFollow(_newTargetForCamera.transform);

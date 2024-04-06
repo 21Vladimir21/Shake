@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class UpgradeButton : MonoBehaviour
 {
     [SerializeField] private UpgradeType _buttonType;
-    [SerializeField] private TMP_Text _levelText;
-    [SerializeField] private TMP_Text _currensyText;
-    [SerializeField] private TMP_Text _distanceText;
+    // [SerializeField] private TMP_Text _levelText;
+    // [SerializeField] private TMP_Text _currensyText;
+    // [SerializeField] private TMP_Text _distanceText;
     [SerializeField] private PlayerStats _stats;
     [SerializeField] private Button _buyWithMoneyButton;
     [SerializeField] private Button _buyWithYansButton;
@@ -188,14 +188,14 @@ public class UpgradeButton : MonoBehaviour
 
     private void UpdateText()
     {
-        string level = DataManager.Instance.Language == "ru" ? "УРОВЕНЬ " : "LEVEL ";
-        _levelText.text = level + (_upgradeLevel + 1);
-        _currensyText.text = Convert.ToString(_currentUpgradeAmount);
-        if (_distanceText)
-        {
-            string distance = DataManager.Instance.Language == "ru" ? "ДИСТАНЦИЯ X" : "DISTANCE X ";
-            _distanceText.text = distance + _stats.MaxDistance.ToString("0.0");
-        }
+        string level = DataManager.Instance.Language == "ru" ? "УРОВЕНЬ " : "LVL ";
+        // _levelText.text = level + (_upgradeLevel + 1);
+        // _currensyText.text = Convert.ToString(_currentUpgradeAmount);
+        // if (_distanceText)
+        // {
+        //     string distance = DataManager.Instance.Language == "ru" ? "ДИСТАНЦИЯ X" : "DISTANCE X ";
+        //     _distanceText.text = distance + _stats.MaxDistance.ToString("0.0");
+        // }
     }
 }
 

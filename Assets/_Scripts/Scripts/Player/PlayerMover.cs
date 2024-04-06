@@ -127,6 +127,7 @@ public class PlayerMover : MonoBehaviour
     public void Push(float pushPower)
     {
         transform.DOMoveZ(transform.position.z - pushPower, 0.5f);
+        Debug.Log("work");
         // _playerAnimator.AnimateObstacleFall();
         Block(true);
         StartCoroutine(WaitToUnlock());

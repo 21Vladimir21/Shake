@@ -25,7 +25,6 @@ public class BrickWall : MonoBehaviour, IObstacle
         DOTween.Sequence().Append(player.DoMove(player.transform.position + _pathLength, _moveDuration))
                           .AppendCallback(() => player.UnlockMovement());
         SoundManager.Instance.PlaySound(_hitWallSound);
-        player.PlayerAnimator.BreakingWall();
         player.TryApplyDamage(_damage);
         BreakWall(player);
     }

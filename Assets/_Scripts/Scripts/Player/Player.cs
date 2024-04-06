@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float _maxHealth;
     [SerializeField] private PlayerAnimator _playerAnimator;
     [SerializeField] private PlayerRuntimeStats _stats;
-    [SerializeField] private AudioClip _jumpSound;
-
+    [SerializeField] private Transform rayPoint;
+    
     private float _currentHealth;
     private PlayerMover _playerMover;
     private PlayerJumpMover _playerJump;
@@ -46,8 +46,8 @@ public class Player : MonoBehaviour
         if (other.gameObject.TryGetComponent(out IEatable food))
             _collisionHandler.HandleFoodCollision(this, food);
         else if (other.gameObject.TryGetComponent(out ILine line))
-            _collisionHandler.HandleLineTrigger(this, line);
-        else if (other.gameObject.TryGetComponent(out IObstacle obstacle))
+            _collisionHandler.HandleLineTrigger(this, line); 
+        if (other.gameObject.TryGetComponent(out IObstacle obstacle))
             _collisionHandler.HandleObstacleCollision(this, obstacle);
         else if (other.gameObject.TryGetComponent(out IEnemy enemy))
             _collisionHandler.HandleEnemyTrigger(this, enemy);
@@ -61,7 +61,6 @@ public class Player : MonoBehaviour
     {
         if (_isJumping && collision.gameObject.tag == "Floor")
         {
-            _playerAnimator.JumpEnded();
             UnlockMovement();
         }
     }
@@ -81,7 +80,20 @@ public class Player : MonoBehaviour
             _collisionHandler.HandleAreaTriggerExit(this, area);
         }
     }
-    
+
+    private void Update()
+    {
+        Ray ray = new Ray(rayPoint.position, Vector3.forward);
+        RaycastHit hit;
+        // Debug.DrawRay(rayPoint.position, Vector3.forward,Color.cyan);
+        if (Physics.Raycast(ray, out hit, 2))
+        {
+            if ( hit.collider.gameObject.GetComponent<Burger>())
+                _playerAnimator.OpenMouth();
+        }
+        else _playerAnimator.CloseMouth();
+    }
+
 
     public void Push(float pushPower)
     {
@@ -90,12 +102,10 @@ public class Player : MonoBehaviour
 
     public void Fall(float value)
     {
-        _playerAnimator.AnimateBeamFall(value);
     }
 
     public void AnimatePunch(Direction direction)
     {
-        _playerAnimator.AnimatePunch(direction);
     }
 
     public void BlockMovement()
@@ -169,15 +179,11 @@ public class Player : MonoBehaviour
 
     public void JumpTo(Transform jumpTarget)
     {
-        _playerAnimator.StartJumpAnimation();
-        SoundManager.Instance.PlaySound(_jumpSound);
         transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-        _playerMover.RestrictedJump(jumpTarget, 3, 1f).OnComplete(() => _playerAnimator.JumpEnded()).SetEase(Ease.Linear);
     }
 
     public void PadJumpTo(Transform destination, bool isOnPad)
     {
-        SoundManager.Instance.PlaySound(_jumpSound);
         _isJumping = true;
         _playerJump.JumpToTarget(destination, isOnPad);
     }
@@ -196,7 +202,6 @@ public class Player : MonoBehaviour
     {
         BlockMovement();
         _playerMover.Rigidbody.velocity = Vector3.zero;
-        _playerAnimator.AnimatePitFall();
         transform.DORotate(new Vector3(90, 0, 0), 1f);
         Camera.Instance.StopFollowing();
         Died?.Invoke();

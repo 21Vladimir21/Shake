@@ -80,7 +80,6 @@ public class PlayerBeamMovement : MonoBehaviour
         _player.PlayerMover.Block(true);
         Vector3 fallingDirectionVector = Vector3.down + (Vector3.left * _fallingDirection * 0.2f);
         Vector3 newRotation = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, AngleConverter.UnwrapAngle(150 * _fallingDirection));
-        _player.PlayerAnimator.PlayFallAnimation(_fallingDirection);
         Camera.Instance.StopFollowing();
         DOTween.Sequence().Append(transform.DORotate(newRotation, 0.5f))
                           .Append(_player.PlayerMover.MoveTo(transform.position + fallingDirectionVector * 4, 0.5f))

@@ -15,7 +15,6 @@ public class Beam : MonoBehaviour, IAreaTrigger
         player.PlayerMover.MoveTo(_startPosition.position, 0.5f).OnComplete(() =>
         {
             player.PlayerMover.EnterBeam();
-            player.PlayerAnimator.SetInsideBeam(true);
         });
         
         
@@ -24,7 +23,6 @@ public class Beam : MonoBehaviour, IAreaTrigger
     public void ExitArea(Player player)
     {
         player.PlayerMover.ExitBeam();
-        player.PlayerAnimator.SetInsideBeam(false);
     }
 
     public void StayInArea(Player player)

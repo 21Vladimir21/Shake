@@ -6,6 +6,5 @@ public class JumpPadEndLine : MonoBehaviour, ILine
 {
     public void LineAction(Player player)
     {
-        player.PlayerAnimator.TrampolineEnd();
     }
 }

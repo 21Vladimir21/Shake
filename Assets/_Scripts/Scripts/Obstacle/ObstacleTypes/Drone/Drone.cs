@@ -22,10 +22,6 @@ public class Drone : MonoBehaviour
     {
         if (_player != null)
         {
-            float turningDirection = _player.PlayerAnimator.TurningDirection;
-            float desiredRotation = Mathf.Lerp(0, _maxRotation, Mathf.Abs(turningDirection));
-            Vector3 rotation = new Vector3(0, 0, desiredRotation * -Mathf.Sign(turningDirection));
-            transform.eulerAngles = rotation;
         }
     }
 }

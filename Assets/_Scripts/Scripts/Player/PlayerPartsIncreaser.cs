@@ -31,11 +31,9 @@ public class PlayerPartsIncreaser : MonoBehaviour
 
         levelText.text = currentHealth.ToString();
         var levelDifference = currentHealth - _lastLevel;
-        Debug.Log(levelDifference);
         GameManager.Instance.ChangeSliderValue(Mathf.Lerp(0, 1, currentHealth / maxHealth));
             scaleBody.localScale += Vector3.one * (levelDifference * 0.05f);
-
-        // TODO: Тут нужно сделать обновление UI для уровня змеи  и её размера 
+            
         _lastLevel = currentHealth;
     }
 

@@ -12,13 +12,11 @@ public class Treadmill : MonoBehaviour, IAreaTrigger
 
     public void EnterArea(Player player)
     {
-        player.PlayerAnimator.SetInsideTreadmill(true);
         player.PlayerMover.ChangeRunningSpeedBy(-_playerSpeedDecrease);
     }
 
     public void ExitArea(Player player)
     {
-        player.PlayerAnimator.SetInsideTreadmill(false);
         player.PlayerMover.ChangeRunningSpeedBy(_playerSpeedDecrease);
         player.PlayerMover.OnTreadmill = false;
     }

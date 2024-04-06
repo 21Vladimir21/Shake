@@ -57,7 +57,6 @@ public class PlayerJumpMover : MonoBehaviour
 
         float startTime = Time.time;
         if (!isOnPad)
-            _animator.StartJumpAnimation();
         _playerInput.ResetDrag();
     
         float jumpEndTime = startTime + timeToReachTarget; // Время окончания прыжка
@@ -83,7 +82,6 @@ public class PlayerJumpMover : MonoBehaviour
         if (isOnPad)
         {
             // Здесь не устанавливаем позицию в target.position
-            _animator.JumpEnded();
             ServiceLocator.Player.UnlockMovement();
         }
     }

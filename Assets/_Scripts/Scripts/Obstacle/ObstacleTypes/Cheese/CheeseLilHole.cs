@@ -15,7 +15,6 @@ public class CheeseLilHole : MonoBehaviour, IObstacle
     {
         _deadZone.gameObject.SetActive(false);
         player.BlockMovement();
-        player.PlayerAnimator.PlayCheeseAnimation();
         DoHoleJump(player);
         StartCoroutine(TryStuck(player));
     }
@@ -24,7 +23,6 @@ public class CheeseLilHole : MonoBehaviour, IObstacle
     {
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         _moveSequence = DOTween.Sequence();
-        _moveSequence.Append(player.DoMove(_destination.position, _duration).OnComplete(() => player.PlayerAnimator.UnlockMovement()));
     }
 
     private IEnumerator TryStuck(Player player)
@@ -45,7 +43,6 @@ public class CheeseLilHole : MonoBehaviour, IObstacle
         _moveSequence.Kill();
         player.transform.position = _stuckDestination.position;
         Debug.Log(new Vector3(_stuckDestination.position.x, transform.position.y, _stuckDestination.position.z));
-        player.PlayerAnimator.StuckAnimation();
         StartCoroutine(DieAfter(player, 1.5f));
     }
 

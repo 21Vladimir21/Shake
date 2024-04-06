@@ -15,8 +15,6 @@ public class CheeseBigHole : MonoBehaviour, IObstacle
 
     private void HoleJump(Player player)
     {
-        player.PlayerAnimator.PlayCheeseAnimation();
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        player.DoMove(_bigHoleDestiation.position, _duration).SetEase(Ease.Linear).OnComplete(player.PlayerAnimator.UnlockMovement);
     }
 }

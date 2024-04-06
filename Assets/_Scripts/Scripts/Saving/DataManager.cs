@@ -13,7 +13,7 @@ using PlayerPrefs = UnityEngine.PlayerPrefs;
 public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
-    public string Language { get; private set; } = "ru";
+    public string Language { get; private set; } = "en";
     private string _path;
     private const string FILE_NAME = "BurgerRunPlayerData.json";
 

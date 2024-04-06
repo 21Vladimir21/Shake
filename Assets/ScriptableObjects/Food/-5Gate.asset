@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1776eed3b94441e4a4095ea5a75210ac, type: 3}
   m_Name: -5Gate
   m_EditorClassIdentifier: 
-  _valueShift: -20
+  _valueShift: -5

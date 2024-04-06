@@ -8,20 +8,41 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: snake_tex
-  m_Shader: {fileID: 4800000, guid: 7529e20851f43fc48b7e26d31dd89a7f, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _EMISSION
-  - _NORMALMAP
-  m_LightmapFlags: 2
+  m_InvalidKeywords: []
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: abf6fd5df43304e4a92d3080b3fa7842, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -30,11 +51,23 @@ Material:
         m_Texture: {fileID: 2800000, guid: 6f58c73e2bb7a5e40a77ab9a30ef0429, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: {}
+    m_Ints: []
     m_Floats:
     - _BaseCellOffset: -0.05
     - _BaseCellSharpness: 0.61
@@ -66,8 +99,8 @@ Material:
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
-    - _Color: {r: 0.9056604, g: 0.6707013, b: 0.70953745, a: 1}
-    - _EmissionColor: {r: 0.066037714, g: 0.045183696, b: 0, a: 0}
+    - _Color: {r: 0.14925243, g: 0.8113208, b: 0.42489266, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _ShadingColor: {r: 0.77647066, g: 0.24705884, b: 0.3803922, a: 0}
     - _ShadowColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0.6509804}
     - _Shhading2color: {r: 0.6037736, g: 0.50978994, b: 0.50978994, a: 0}

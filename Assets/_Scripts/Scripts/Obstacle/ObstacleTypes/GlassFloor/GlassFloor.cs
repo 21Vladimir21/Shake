@@ -41,7 +41,6 @@ public class GlassFloor : MonoBehaviour, IAreaTrigger
 
     public void EnterArea(Player player)
     {
-        player.PlayerAnimator.SetInsideGlass(true);
         _playerTransform = player.transform;
         StartCoroutine(InGlassAreaRoutine());
         player.PlayerMover.ChangeRunningSpeedBy(-_amountToAffectPlayerSpeed);
@@ -54,7 +53,6 @@ public class GlassFloor : MonoBehaviour, IAreaTrigger
 
     public void ExitArea(Player player)
     {
-        player.PlayerAnimator.SetInsideGlass(false);
         player.PlayerMover.ChangeRunningSpeedBy(_amountToAffectPlayerSpeed);
     }
 }

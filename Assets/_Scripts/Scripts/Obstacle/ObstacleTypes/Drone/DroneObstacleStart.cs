@@ -20,13 +20,11 @@ public class DroneObstacleStart : MonoBehaviour, IObstacle
         yield return new WaitForSeconds(0.5f);
         Camera.Instance.UpdateOffsetBy(new Vector3(0, 1.5f, 0), 2);
         Camera.Instance.UpdateRotationBy(new Vector3(10, 0, 0), 2);
-        player.PlayerAnimator.MountDrone();
         yield return WaitFor.Frames(15);
         player.transform.DOLocalMoveY(player.transform.localPosition.y + 1.35f, 0.5f);
         yield return new WaitForSeconds(0.5f);
         _drone.SetHandsTrigger(player);
         _drone.transform.SetParent(player.transform);
         player.PlayerMover.Block(false);
-        player.PlayerAnimator.AnimateDroneMovement();
     }
 }

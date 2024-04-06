@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 869936273970117438}
   - component: {fileID: 4645444968287232259}
   - component: {fileID: 2304209632030491769}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SnakeLevelPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 5323832843885630057}
   - component: {fileID: 728277847945728174}
   - component: {fileID: 5656877370870736382}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: LevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,13 +525,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2385225175100910862}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20743185, y: -0, z: -0, w: 0.9782495}
-  m_LocalPosition: {x: 0.16000009, y: 4.894, z: -5.669999}
+  m_LocalRotation: {x: 0.20607817, y: -0.11156752, z: 0.023657182, w: 0.97186667}
+  m_LocalPosition: {x: 2.32, y: 4.894, z: -5.669999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5016232256728424286}
-  m_LocalEulerAnglesHint: {x: 23.944, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 23.944, y: -13.097, z: 0}
 --- !u!20 &4454682601237737872
 Camera:
   m_ObjectHideFlags: 0
@@ -1260,10 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c264e2f66474fa69bcb9232b5963e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
-  _rigidbody: {fileID: 5970607178548924947}
-  _playerMover: {fileID: 779126618632132107}
-  _animationState: 1
+  _animator: {fileID: 3304395821472349063}
 --- !u!114 &4425913228839413705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,9 +1326,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 10000
-  _playerAnimator: {fileID: 0}
+  _playerAnimator: {fileID: 7624927298464684431}
   _stats: {fileID: 11400000, guid: b2547152f71df224c9a5eadff824a8b2, type: 2}
-  _jumpSound: {fileID: 8300000, guid: 3ca21e9b4fc83ff48afabf19637354fb, type: 3}
+  rayPoint: {fileID: 2753030237362687580}
 --- !u!114 &2399136448289629675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1416,7 +1413,7 @@ GameObject:
   - component: {fileID: 164698212764781303}
   - component: {fileID: 7793176690719741342}
   - component: {fileID: 5275700805676735757}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1671,7 +1668,7 @@ GameObject:
   - component: {fileID: 2098137680230932236}
   - component: {fileID: 4660171102648924336}
   - component: {fileID: 3474105804518246247}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}

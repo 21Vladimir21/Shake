@@ -14,7 +14,6 @@ public class DroneObstacleEnd : MonoBehaviour,IObstacle
         Camera.Instance.UpdateRotationBy(Vector3.zero, 2);
         Camera.Instance.UpdateOffsetBy(Vector3.zero, 2);
         DOTween.Sequence().Append(player.transform.DOMove(_endPosition.position, 1f))
-                          .AppendCallback(player.PlayerAnimator.DismountDrone)
                           .Append(_drone.transform.DOLocalMoveY(10, 1).OnComplete(() => Destroy(_drone)));
     }
 }

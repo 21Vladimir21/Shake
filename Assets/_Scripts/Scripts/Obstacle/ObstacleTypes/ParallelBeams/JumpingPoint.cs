@@ -10,7 +10,6 @@ public class JumpingPoint : MonoBehaviour, IObstacle
 
     public void AffectPlayer(Player player)
     {
-        player.PlayerAnimator.AnimateJumpToBeams();
         DOTween.Sequence().Append(player.PlayerMover.RestrictedJump(_destination, 2, 1f)).SetEase(Ease.Linear)
                           .AppendCallback(() => player.PlayerRollingMovement.StartMovement(_currentLane));
         

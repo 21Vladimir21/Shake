@@ -1,7 +1,9 @@
 using System;
 using DG.Tweening;
 using Agava.WebUtility;
+using DefaultNamespace.EnemySnake;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -11,6 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SpawnPoint spawnPoint;
     [SerializeField] private Transform endLevelPosition;
     private float _levelMagnitude;
+
+ [SerializeField] private EnemySnake[] enemies;
+    
 
 
     private void Awake()
@@ -24,6 +29,8 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         
         _levelMagnitude = (endLevelPosition.position-spawnPoint.PlayerStartPosition).magnitude;
+
+        spawnPoint.Player.HealthChanged += UpdateEnemiesState;
     }
 
     private void OnEnable()
@@ -36,6 +43,12 @@ public class GameManager : MonoBehaviour
         WebApplication.InBackgroundChangeEvent -= InBackground;
     }
 
+
+    private void UpdateEnemiesState(float a,float b)
+    {
+        for (int i = 0; i < enemies.Length; i++) enemies[i].TryUpdateState(spawnPoint.Player.Health);
+        Debug.Log(spawnPoint.Player.Health);
+    }
     private void InBackground(bool isInBackground)
     {
         Time.timeScale = Convert.ToInt16(!isInBackground);
