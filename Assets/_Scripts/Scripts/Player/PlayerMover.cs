@@ -7,8 +7,8 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private Transform rotatableHead;
-    
-    
+
+
     [SerializeField] private float _runningSpeed;
     [SerializeField] private float _runningBeamSpeed = 300f;
     private float _startingSpeed;
@@ -21,16 +21,17 @@ public class PlayerMover : MonoBehaviour
 
     [Header("Timings")] [SerializeField] private float _stunSeconds;
     [SerializeField] private float _standUpCooldown;
-    
-    [Space(10)][Header("Jump Pad")]
-    [SerializeField] private float _jumpPadHeight;
+
+    [Space(10)] [Header("Jump Pad")] [SerializeField]
+    private float _jumpPadHeight;
+
     [SerializeField] private float _horizontalForceMultiplier;
     [SerializeField] private float _verticalForceMultiplier;
-    
-    
+
+
     private PlayerInput _playerInput;
     private PlayerBeamMovement _playerBeamMovement;
-    
+
     private Rigidbody _rigidbody;
     public Rigidbody Rigidbody => _rigidbody;
 
@@ -55,7 +56,7 @@ public class PlayerMover : MonoBehaviour
 
         _startingSpeed = _runningSpeed;
     }
-    
+
     private void Start()
     {
         ServiceLocator.Player.Died += OnPlayerDied;
@@ -74,13 +75,14 @@ public class PlayerMover : MonoBehaviour
 
     public void TryMove()
     {
-        if ((Input.GetMouseButton(0) || Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") > 0)&& !_isStunned && !_isJumping)
+        if ((Input.GetMouseButton(0) || Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") > 0) &&
+            !_isStunned && !_isJumping)
         {
             Move();
         }
         else
         {
-            _rigidbody.velocity = Vector3.zero;
+            if (_rigidbody.isKinematic == false) _rigidbody.velocity = Vector3.zero;
         }
 
         if ((_isJumping || _insideBeam) && !_isStunned)
@@ -102,7 +104,7 @@ public class PlayerMover : MonoBehaviour
         var moveDirection = GetMoveDirection();
         // _playerAnimator.TurningDirection = GetXDirection();
         _rigidbody.velocity = new Vector3(_insideBeam ? 0 : moveDirection.x, 0f + YVelocityOffset, moveDirection.z);
-        
+
         if (moveDirection != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
@@ -127,15 +129,16 @@ public class PlayerMover : MonoBehaviour
     public void Push(float pushPower)
     {
         transform.DOMoveZ(transform.position.z - pushPower, 0.5f);
-        Debug.Log("work");
         // _playerAnimator.AnimateObstacleFall();
-        Block(true);
+        if (_isStunned) return;
         StartCoroutine(WaitToUnlock());
+        Block(true);
     }
 
     private IEnumerator WaitToUnlock()
     {
         yield return new WaitForSeconds(1f);
+        ServiceLocator.Player.Die();
         Block(false);
     }
 
@@ -144,15 +147,15 @@ public class PlayerMover : MonoBehaviour
         _isStunned = value;
     }
 
-     public Tween MoveTo(Vector3 target, float moveDuration)
-     {
-         // _playerAnimator.SetRunningTrigger();
+    public Tween MoveTo(Vector3 target, float moveDuration)
+    {
+        // _playerAnimator.SetRunningTrigger();
         // _playerAnimator.SetPlayerAnimationState(PlayerAnimationState.Other);
         return _rigidbody.DOMove(target, moveDuration).SetEase(Ease.Linear);
-                          //.OnComplete(() => _playerAnimator.SetPlayerAnimationState(PlayerAnimationState.Idle));
-     }
-     
-     public Tween RestrictedJump(Transform target, float jumpPower, float duration)
+        //.OnComplete(() => _playerAnimator.SetPlayerAnimationState(PlayerAnimationState.Idle));
+    }
+
+    public Tween RestrictedJump(Transform target, float jumpPower, float duration)
     {
         Block(true);
         return _rigidbody.DOJump(target.position, jumpPower, 1, duration);
@@ -165,7 +168,7 @@ public class PlayerMover : MonoBehaviour
         Block(false);
         // _playerAnimator.SetRunningTrigger();
     }
-    
+
     public void ChangeRunningSpeedBy(float value)
     {
         _runningSpeed += value;
@@ -190,5 +193,4 @@ public class PlayerMover : MonoBehaviour
     {
         _playerBeamMovement.BalanceItOut();
     }
-
 }

@@ -12,6 +12,9 @@ public class LevelSpawner : MonoBehaviour
     [SerializeField] private LevelEndCanvas _endCanvas;
     [SerializeField] private InterstitialAdsManager _manager;
 
+    [SerializeField] private SpawnPoint spawnPoint;
+    
+
     public event Action LevelSpawned;
     public int CurrentLevel => _currentLvlNum;
 
@@ -81,14 +84,17 @@ public class LevelSpawner : MonoBehaviour
 
     public void Restart()
     {
-        Debug.Log(_intantiatedLevel.name);
-        Destroy(_intantiatedLevel.gameObject);
-        DataManager.Instance.SaveData();
-#if UNITY_EDITOR
-        SpawnLevel(_currentLvlNum);
-        return;
-#endif
-        ShowAdsAndSpawnLevel();
+
+        SceneManager.LoadScene(0);
+//         Debug.Log(_intantiatedLevel.name);
+//         Destroy(_intantiatedLevel.gameObject);
+//         DataManager.Instance.SaveData();
+// #if UNITY_EDITOR
+//         SpawnLevel(_currentLvlNum);
+//         return;
+// #endif
+//         ShowAdsAndSpawnLevel();
+
     }
 
     private void ShowAdsAndSpawnLevel()

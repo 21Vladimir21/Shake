@@ -26,6 +26,8 @@ public class PlayerPartsIncreaser : MonoBehaviour
 
     }
 
+    public void ResetLevel() => scaleBody.localScale = Vector3.one;
+
     private void OnHealthChanged(float currentHealth, float maxHealth)
     {
 
@@ -36,6 +38,7 @@ public class PlayerPartsIncreaser : MonoBehaviour
             
         _lastLevel = currentHealth;
     }
+    
 
 
 }

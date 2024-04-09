@@ -14,6 +14,7 @@ public class LevelEndCanvas : MonoBehaviour
     private void Start()
     {
         _secretGiftPanel.ClosedSecretGiftPanel += ShowWinPanel;
+        ServiceLocator.SetEndCanvas(this);
     }
 
     private void ShowWinPanel()

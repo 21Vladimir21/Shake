@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerAnimator _playerAnimator;
     [SerializeField] private PlayerRuntimeStats _stats;
     [SerializeField] private Transform rayPoint;
+    [SerializeField] private PlayerPartsIncreaser increasere;
+    
     
     private float _currentHealth;
     private PlayerMover _playerMover;
@@ -147,6 +149,8 @@ public class Player : MonoBehaviour
     public void Die()
     {
         ServiceLocator.GetEndCanvas().ShowLosePanel();
+        _currentHealth = 0;
+        increasere.ResetLevel();
     }
 
     private void ResetHealth(float value)

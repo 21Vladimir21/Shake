@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Reference/_Scenes/Game.unity
     guid: f4019d498a030bb40a80f8a7e2bb2848
-  - enabled: 1
+  - enabled: 0
     path: Assets/Reference/_Scenes/Snake_Crusher/Snake_Crusher.unity
     guid: 9c07887de48ddbb478608321510c877f
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 90538f665b8261d4b85811e4b26f4001
   m_configObjects: {}

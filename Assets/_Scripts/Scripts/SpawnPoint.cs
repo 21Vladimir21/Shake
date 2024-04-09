@@ -15,4 +15,9 @@ public class SpawnPoint : MonoBehaviour
         Player = Instantiate(_player, transform.position, transform.rotation);
         Player.transform.SetParent(transform);
     }
+
+    public void ResetPlayerPosition()
+    {
+        Player.transform.position = transform.position;
+    }
 }
