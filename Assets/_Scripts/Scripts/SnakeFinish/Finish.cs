@@ -26,7 +26,7 @@ namespace DefaultNamespace.SnakeFinish
         private void GoToNextPipe(int pipeNumber, Action callback = null)
         {
             _player.RotatePivot.LookAt(finishPipes[pipeNumber].Entry);
-            _player.RotatePivot.DOMove(finishPipes[pipeNumber].Entry.position, 1f).SetEase(Ease.Linear)
+            _player.RotatePivot.DOMove(finishPipes[pipeNumber].Entry.position, finishPipes[pipeNumber].moveToPipeTime).SetEase(Ease.Linear)
                 .OnComplete(() => finishPipes[pipeNumber].StartRotate(_player.RotatePivot, () =>
                 {
                     pipeNumber++;
