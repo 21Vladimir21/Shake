@@ -28,6 +28,11 @@ namespace DefaultNamespace.EnemySnake
         private void Awake()
         {
             levelText.text = enemyLevel.ToString();
+            CreateCloneMaterial();
+        }
+
+        private void CreateCloneMaterial()
+        {
             _clonedMaterial = Instantiate(originalMaterial);
             Renderer renderer = materialsObject.GetComponent<Renderer>();
             if (renderer.materials.Length >= 2)

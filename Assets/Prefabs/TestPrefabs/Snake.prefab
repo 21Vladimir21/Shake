@@ -526,8 +526,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2385225175100910862}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.28758135, y: -0.0905079, z: 0.027309787, w: 0.953079}
-  m_LocalPosition: {x: 1.1759999, y: 5.358, z: -5.8829994}
+  m_LocalRotation: {x: 0.30305392, y: -1e-45, z: -0, w: 0.9529734}
+  m_LocalPosition: {x: 0, y: 6.376, z: -7.0480003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 0.5
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -2621,8 +2621,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8858538270711321595}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.28758135, y: -0.0905079, z: 0.027309787, w: 0.953079}
-  m_LocalPosition: {x: 1.176, y: 5.358, z: -5.883}
+  m_LocalRotation: {x: 0.30305392, y: -1e-45, z: -0, w: 0.9529734}
+  m_LocalPosition: {x: 0, y: 6.376, z: -7.048}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2866,5 +2866,6 @@ MonoBehaviour:
   rotationSpeed: 2
   rotateValue: 340
   clockwise: 0
+  moveToPipeTime: 0
   particle: {fileID: 0}
   _camera: {fileID: 0}

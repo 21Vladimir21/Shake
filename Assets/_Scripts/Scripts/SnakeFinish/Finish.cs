@@ -25,6 +25,7 @@ namespace DefaultNamespace.SnakeFinish
 
         private void GoToNextPipe(int pipeNumber, Action callback = null)
         {
+            finishPipes[pipeNumber].EnableCamera(_player.RotatePivot);
             _player.RotatePivot.LookAt(finishPipes[pipeNumber].Entry);
             _player.RotatePivot.DOMove(finishPipes[pipeNumber].Entry.position, finishPipes[pipeNumber].moveToPipeTime).SetEase(Ease.Linear)
                 .OnComplete(() => finishPipes[pipeNumber].StartRotate(_player.RotatePivot, () =>
@@ -32,6 +33,10 @@ namespace DefaultNamespace.SnakeFinish
                     pipeNumber++;
                     Debug.Log($"Pipe number {_pipeNumber}   {pipeNumber}");
                     if (_pipeNumber < finishPipes.Length) GoToNextPipe(pipeNumber);
+                    else
+                    {
+                        Debug.Log("Last Pipe");
+                    }
                 }));
         }
     }
