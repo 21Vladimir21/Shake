@@ -6,6 +6,8 @@ public class PlayerPartsIncreaser : MonoBehaviour
 {
     [SerializeField] private Transform scaleBody;
     [SerializeField] private TMP_Text levelText;
+    [SerializeField] private SnakeTail snakeTail;
+    
     
     private Player _player;
     private float _lastLevel;
@@ -36,6 +38,7 @@ public class PlayerPartsIncreaser : MonoBehaviour
         GameManager.Instance.ChangeSliderValue(Mathf.Lerp(0, 1, currentHealth / maxHealth));
             scaleBody.localScale += Vector3.one * (levelDifference * 0.05f);
             
+            snakeTail.ChaneTailScale(levelDifference );
         _lastLevel = currentHealth;
     }
     
