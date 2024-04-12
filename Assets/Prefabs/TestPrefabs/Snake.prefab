@@ -1473,8 +1473,9 @@ MonoBehaviour:
   bonePrefab: {fileID: 2637573775756075465, guid: 41d51b3e9de3fe047a1156438bd8f00a, type: 3}
   tailPivot: {fileID: 6007343816073521503}
   splineComputer: {fileID: 3727454315614438791}
-  space: 0.15
-  startBoneCount: 30
+  space: 0.5
+  boneScale: 0.22
+  startBoneCount: 5
 --- !u!1 &3812110646598504507
 GameObject:
   m_ObjectHideFlags: 0
