@@ -98,9 +98,9 @@ public class SnakeTail : MonoBehaviour
         var bone = Instantiate(bonePrefab, tailPivot.position + Vector3.back.normalized * space * index,
             Quaternion.identity);
 
-        var scale = Vector3.one * boneScale / index;
-        var clampScale = Mathf.Clamp(scale.x, 0.01f, boneScale);
-        bone.localScale = Vector3.one * clampScale;
+        
+
+        bone.localScale = Vector3.one * boneScale;
 
         _snakeBones.Add(bone);
     }
@@ -130,8 +130,8 @@ public class SnakeTail : MonoBehaviour
             boneNumber++;
             BoneScale(boneNumber);
         }).Insert(0,
-            _snakeBones[boneNumber].DOScale(_snakeBones[boneNumber].localScale * 2, scaleDuration)).Insert(0.5f,
-            _snakeBones[boneNumber].DOScale(_snakeBones[boneNumber].localScale.x , scaleDuration).OnComplete(() =>
+            _snakeBones[boneNumber].DOScale(Vector3.one * (boneScale * 2), scaleDuration)).Insert(0.5f,
+            _snakeBones[boneNumber].DOScale(Vector3.one * boneScale, scaleDuration).OnComplete(() =>
             {
                 cycleNumber++;
                 if (cycleNumber == _snakeBones.Count)
