@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
         // Debug.DrawRay(rayPoint.position, Vector3.forward,Color.cyan);
         if (Physics.Raycast(ray, out hit, 2))
         {
-            if (hit.collider.gameObject.GetComponent<Burger>())
+            if (hit.collider.gameObject.GetComponent<Apple>())
                 _playerAnimator.OpenMouth();
         }
         else _playerAnimator.CloseMouth();

@@ -65,7 +65,6 @@ public class SnakeTail : MonoBehaviour
                 _snakeBones[i].rotation = Quaternion.Slerp(_snakeBones[i].rotation, rotateTarget, Time.deltaTime * 21);
                 _snakeBones[i].position = Vector3.Lerp(_snakeBones[i].position, tailPos,
                     Time.deltaTime * 20);
-                
             }
         }
 

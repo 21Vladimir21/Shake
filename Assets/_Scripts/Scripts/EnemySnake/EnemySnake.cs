@@ -20,7 +20,7 @@ namespace DefaultNamespace.EnemySnake
         [SerializeField] private MeshRenderer tailMesh;
 
 
-        [SerializeField] private List<Burger> burger;
+        [SerializeField] private List<Apple> burger;
         [SerializeField] private List<Fence> fence;
 
 
@@ -49,7 +49,7 @@ namespace DefaultNamespace.EnemySnake
         {
             foreach (var part in parts)
             {
-                part.TryGetComponent(out Burger bur);
+                part.TryGetComponent(out Apple bur);
                 part.TryGetComponent(out Fence fen);
                 burger.Add(bur);
                 fence.Add(fen);

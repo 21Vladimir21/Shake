@@ -2,7 +2,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class Burger : Food, IEatable
+public class Apple : Food, IEatable
 {
     private bool _canEat = true;
     [SerializeField] private Collider collider;
