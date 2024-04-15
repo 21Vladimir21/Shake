@@ -60,10 +60,12 @@ public class SnakeTail : MonoBehaviour
                 else tailTarget = _snakeBones[i - 1];
 
                 Vector3 tailPos = tailTarget.position - tailTarget.forward * space;
-                _snakeBones[i].LookAt(tailPos);
-
+                var rotateTarget = Quaternion.LookRotation(tailPos - _snakeBones[i].position);
+                // _snakeBones[i].LookAt(tailPos);
+                _snakeBones[i].rotation = Quaternion.Slerp(_snakeBones[i].rotation, rotateTarget, Time.deltaTime * 21);
                 _snakeBones[i].position = Vector3.Lerp(_snakeBones[i].position, tailPos,
                     Time.deltaTime * 20);
+                
             }
         }
 
