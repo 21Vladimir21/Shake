@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LosePanel : MonoBehaviour, IPanel
@@ -29,7 +30,8 @@ public class LosePanel : MonoBehaviour, IPanel
 
     private void OnReloadButtonClicked()
     {
-        ServiceLocator.LevelSpawner.Restart();
+        // ServiceLocator.LevelSpawner.Restart();
+        SceneManager.LoadScene(0);
         Deactivate();
     }
 }

@@ -52,7 +52,7 @@ public class FinishPipe : MonoBehaviour
     private void CreateCloneMaterial()
     {
         Renderer renderer = GetComponent<Renderer>();
-        _clonedMaterial = Instantiate(renderer.material);
+            _clonedMaterial = Instantiate(renderer.material);
         renderer.material = _clonedMaterial;
     }
 

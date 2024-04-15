@@ -526,7 +526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2385225175100910862}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2855067, y: 0.000000016490194, z: -0.0000000049125366, w: 0.9583767}
+  m_LocalRotation: {x: 0.2855067, y: -0.000000016490194, z: 0.0000000049125375, w: 0.9583767}
   m_LocalPosition: {x: 0, y: 5.56, z: -6.3999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1304,7 +1304,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3809105859667962578}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77a7368539b1417ea7da36e824bddd1f, type: 3}
   m_Name: 
@@ -2864,7 +2864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8858538270711321595}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2855067, y: 0.000000016490194, z: -0.0000000049125366, w: 0.9583767}
+  m_LocalRotation: {x: 0.2855067, y: -0.000000016490194, z: 0.0000000049125375, w: 0.9583767}
   m_LocalPosition: {x: 0, y: 5.56, z: -6.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3068,7 +3068,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9108363811055247683}
-  - component: {fileID: 2947154095814457139}
   m_Layer: 6
   m_Name: Head (1)
   m_TagString: Untagged
@@ -3092,26 +3091,3 @@ Transform:
   - {fileID: 5105844930602865627}
   m_Father: {fileID: 5016232256728424286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2947154095814457139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9119981588999512518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2218808726d4101b17142622b9f6652, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Entry>k__BackingField: {fileID: 0}
-  rotatePivot: {fileID: 0}
-  white: {r: 1, g: 1, b: 1, a: 1}
-  rotationSpeed: 2
-  rotateValue: 340
-  uppingValue: 1
-  moveToPipeTime: 0
-  clockwise: 0
-  chest: {fileID: 0}
-  particle: {fileID: 0}
-  _camera: {fileID: 0}

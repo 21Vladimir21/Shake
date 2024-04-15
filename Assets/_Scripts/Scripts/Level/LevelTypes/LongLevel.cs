@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Level))]
+
 public class LongLevel : MonoBehaviour, ILevel
 {
     [SerializeField] private PushEnding _ending;

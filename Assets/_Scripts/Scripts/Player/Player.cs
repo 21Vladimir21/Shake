@@ -4,7 +4,6 @@ using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMover))]
-[RequireComponent(typeof(PlayerJumpMover))]
 [RequireComponent(typeof(PlayerCollisionHandler))]
 public class Player : MonoBehaviour
 {
@@ -18,7 +17,7 @@ public class Player : MonoBehaviour
 
     private float _currentHealth;
     private PlayerMover _playerMover;
-    private PlayerJumpMover _playerJump;
+
     private PlayerCollisionHandler _collisionHandler;
     private bool _isJumping;
     private bool _movementBlocked;
@@ -37,7 +36,6 @@ public class Player : MonoBehaviour
     {
         ServiceLocator.Player = this;
         _playerMover = GetComponent<PlayerMover>();
-        _playerJump = GetComponent<PlayerJumpMover>();
         _collisionHandler = GetComponent<PlayerCollisionHandler>();
         PlayerRollingMovement = GetComponent<PlayerRollingMovement>();
     }
@@ -194,7 +192,6 @@ public class Player : MonoBehaviour
     public void PadJumpTo(Transform destination, bool isOnPad)
     {
         _isJumping = true;
-        _playerJump.JumpToTarget(destination, isOnPad);
     }
 
     public void GiveAdditionalPower(float value)

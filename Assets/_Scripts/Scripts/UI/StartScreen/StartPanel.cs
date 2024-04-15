@@ -13,7 +13,7 @@ public class StartPanel : MonoBehaviour, IPointerDownHandler
 
     private void OnEnable()
     {
-        _levelSpawner.LevelSpawned += OnLevelSpawned;
+        // _levelSpawner.LevelSpawned += OnLevelSpawned;
         _shopButton.onClick.AddListener(OnShopButtonClicked);
     }
 
