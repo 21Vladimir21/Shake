@@ -29,7 +29,6 @@ namespace DefaultNamespace.EnemySnake
         private void Awake()
         {
             levelText.text = enemyLevel.ToString();
-            CreateCloneMaterial();
         }
 
         private void CreateCloneMaterial()
@@ -55,6 +54,7 @@ namespace DefaultNamespace.EnemySnake
                 burger.Add(bur);
                 fence.Add(fen);
             }
+            CreateCloneMaterial();
         }
 
         public void TryUpdateState(float playerLevel)
@@ -70,16 +70,50 @@ namespace DefaultNamespace.EnemySnake
             _clonedMaterial.mainTexture = canEat;
             backgroundImage.color = canEatColor;
 
-            foreach (var burg in burger) burg.enabled = true;
-            foreach (var fen in fence) fen.enabled = false;
+            foreach (var burg in burger)
+            {
+                if (burg == null)
+                {
+                
+                    continue;
+                }
+                burg.enabled = true;
+            }
+
+            foreach (var fen in fence)
+            {
+                if (fen == null)
+                {
+           
+                    continue;
+                }
+                fen.enabled = false;
+            }
         }
 
         private void SetNotCanEat()
         {
             _clonedMaterial.mainTexture = notCanEat;
             backgroundImage.color = notCanEatColor;
-            foreach (var burg in burger) burg.enabled = false;
-            foreach (var fen in fence) fen.enabled = true;
+            foreach (var burg in burger)
+            {
+                if (burg == null)
+                {
+                    burger.Remove(burg);
+                    continue;
+                }
+                burg.enabled = false;
+            }
+
+            foreach (var fen in fence)
+            {
+                if (fen == null)
+                {
+                    fence.Remove(fen);
+                    continue;
+                }
+                fen.enabled = true;
+            }
         }
     }
 }

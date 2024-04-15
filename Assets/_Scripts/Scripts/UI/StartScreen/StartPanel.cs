@@ -25,7 +25,7 @@ public class StartPanel : MonoBehaviour, IPointerDownHandler
 
     private void OnDisable()
     {
-        _levelSpawner.LevelSpawned -= OnLevelSpawned;
+        // _levelSpawner.LevelSpawned -= OnLevelSpawned;
         _shopButton.onClick.RemoveListener(OnShopButtonClicked);
     }
 

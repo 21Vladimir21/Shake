@@ -188,7 +188,6 @@ public class UpgradeButton : MonoBehaviour
 
     private void UpdateText()
     {
-        string level = DataManager.Instance.Language == "ru" ? "УРОВЕНЬ " : "LVL ";
         // _levelText.text = level + (_upgradeLevel + 1);
         // _currensyText.text = Convert.ToString(_currentUpgradeAmount);
         // if (_distanceText)

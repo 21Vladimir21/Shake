@@ -8,7 +8,7 @@ public class FinishPipe : MonoBehaviour
 {
     [field: SerializeField] public Transform Entry { get; private set; }
     [SerializeField] private Transform rotatePivot;
-    [SerializeField]private Color white = Color.white;
+    [SerializeField] private Color white = Color.white;
     [SerializeField] private float rotationSpeed = 2f;
     [SerializeField] private float rotateValue = 340;
     [SerializeField] private float uppingValue = 1f;
@@ -24,12 +24,12 @@ public class FinishPipe : MonoBehaviour
 
     private const string Open_Chest_Key = "Open";
 
-    private void Awake()
+
+    private void Start()
     {
         CreateCloneMaterial();
         SaveAndSetNewColor();
     }
-    
 
     public void EnableCamera(Transform target)
     {

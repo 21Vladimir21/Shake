@@ -4,7 +4,7 @@ namespace DefaultNamespace.Gates
     {
         public void Eat(Player player)
         {
-            player.TryApplyDamage(-_foodData.ValueShift,false);
+            player.TryApplyDamage(-_foodData.ValueShift);
             //player.PlayerAnimator.SetRunningTrigger();
             FoodEaten();
         }

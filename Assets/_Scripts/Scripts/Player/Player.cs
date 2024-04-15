@@ -5,7 +5,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerMover))]
 [RequireComponent(typeof(PlayerJumpMover))]
-[RequireComponent(typeof(PlayerSkinSwitcher))]
 [RequireComponent(typeof(PlayerCollisionHandler))]
 public class Player : MonoBehaviour
 {
@@ -21,7 +20,6 @@ public class Player : MonoBehaviour
     private PlayerMover _playerMover;
     private PlayerJumpMover _playerJump;
     private PlayerCollisionHandler _collisionHandler;
-    private PlayerSkinSwitcher _skinSwitcher;
     private bool _isJumping;
     private bool _movementBlocked;
     private float _lastLevel;
@@ -40,7 +38,6 @@ public class Player : MonoBehaviour
         ServiceLocator.Player = this;
         _playerMover = GetComponent<PlayerMover>();
         _playerJump = GetComponent<PlayerJumpMover>();
-        _skinSwitcher = GetComponent<PlayerSkinSwitcher>();
         _collisionHandler = GetComponent<PlayerCollisionHandler>();
         PlayerRollingMovement = GetComponent<PlayerRollingMovement>();
     }
@@ -119,7 +116,7 @@ public class Player : MonoBehaviour
 
     public void SwitchSkin(Skin newSkin)
     {
-        _skinSwitcher.Switch(newSkin);
+       
     }
 
     public void UnlockMovement()

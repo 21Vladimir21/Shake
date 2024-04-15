@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Player))]
@@ -36,7 +37,10 @@ public class PlayerPartsIncreaser : MonoBehaviour
         levelText.text = currentHealth.ToString();
         var levelDifference = currentHealth - _lastLevel;
         GameManager.Instance.ChangeSliderValue(Mathf.Lerp(0, 1, currentHealth / maxHealth));
-            scaleBody.localScale += Vector3.one * (levelDifference * 0.05f);
+        var newScale = scaleBody.localScale;
+        newScale  += Vector3.one * (levelDifference * 0.05f);
+        scaleBody.DOScale(newScale, 1f);
+            // scaleBody.localScale += Vector3.one * (levelDifference * 0.05f);
         //     
         //     snakeTail.ChaneTailScale(levelDifference,(int)currentHealth,true );
         _lastLevel = currentHealth;

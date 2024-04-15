@@ -10,11 +10,11 @@ namespace DefaultNamespace.EnemySnake
         [SerializeField] private SplineComputer splineComputer;
         [SerializeField] private TubeGenerator tubeGenerator;
         [SerializeField] private EnemySnake enemySnake;
-        
+
         [SerializeField] private Transform tailPivot;
         [Range(0, 100), SerializeField] private int startBoneCount = 4;
         [SerializeField] private Transform bonePrefab;
-        
+
         [SerializeField] private float space;
         [SerializeField] private float boneScale;
         private List<Transform> _snakeBones = new();
@@ -30,14 +30,16 @@ namespace DefaultNamespace.EnemySnake
 
         private void LateUpdate()
         {
-
-            splineComputer.SetPoints(_snakeBones.Select(x => new SplinePoint
+            if (tailPivot == null) return;
+            DirectionTailMoving2();
+            splineComputer.SetPoints(_snakeBones.Take(_snakeBones.Count).Select(x => new SplinePoint
             {
                 position = x.position,
                 normal = Vector3.up,
                 size = x.localScale.x
             }).ToArray());
         }
+
         private void DirectionTailMoving2()
         {
             tubeGenerator.sizeModifier.keys[0].size = -(boneScale - 0.05f);
@@ -45,6 +47,12 @@ namespace DefaultNamespace.EnemySnake
             {
                 for (int i = 0; i < _snakeBones.Count; i++)
                 {
+                    if (_snakeBones[i] == null)
+                    {
+                        _snakeBones.RemoveAt(i);
+                        continue;
+                    }
+
                     Transform tailTarget;
                     if (i == 0)
                     {
@@ -64,7 +72,7 @@ namespace DefaultNamespace.EnemySnake
 
             _lastPosition = tailPivot.position;
         }
-        
+
         private void AddBone(int index)
         {
             var bone = Instantiate(bonePrefab, tailPivot.position + Vector3.back.normalized * space * index,

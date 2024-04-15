@@ -183,8 +183,6 @@ public class DataManager : MonoBehaviour
             CreateNewSave();
         else
             DecodeJson(json); 
-        Debug.Log(_skins.SkinPages.PagesList.Count);
-        Debug.Log(_skins.SkinPages.PagesList[0].Skins.Count);
         onSuccessCallback?.Invoke();
     }
     

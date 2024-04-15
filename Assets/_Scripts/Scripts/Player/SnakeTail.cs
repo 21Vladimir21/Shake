@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
@@ -92,7 +93,7 @@ public class SnakeTail : MonoBehaviour
     {
         _tailIndex = newIndex;
         foreach (var bone in _snakeBones) bone.localScale += Vector3.one * newScale * 0.015f;
-        boneScale = _snakeBones[0].localScale.x;
+        boneScale += 1 * newScale * 0.015f;
         if (isAnimated) BoneScale(0);
         else
         {
@@ -134,24 +135,33 @@ public class SnakeTail : MonoBehaviour
     {
         var scaleDuration = 1f;
         var seq = DOTween.Sequence();
+        var scale = boneScale;
+        seq.OnUpdate(() => scale = boneScale);
+        if (boneNumber == 0) StartCoroutine(AddBoneRoutine());
         seq.AppendInterval(0.2f).AppendCallback(() =>
         {
             boneNumber++;
             if (boneNumber == _snakeBones.Count - 1) return;
             BoneScale(boneNumber);
         }).Insert(0,
-            _snakeBones[boneNumber].DOScale(Vector3.one * (boneScale * 2), scaleDuration)).Insert(0.5f,
-            _snakeBones[boneNumber].DOScale(Vector3.one * boneScale, scaleDuration).OnComplete(() =>
+            _snakeBones[boneNumber].DOScale(Vector3.one * (scale * 2), scaleDuration)).Insert(0.5f,
+            _snakeBones[boneNumber].DOScale(Vector3.one * scale, scaleDuration).OnComplete(() =>
             {
                 cycleNumber++;
                 if (cycleNumber == _snakeBones.Count - 1)
                 {
                     cycleNumber = 0;
-                    for (int i = 0; i < _tailIndex; i++)
-                    {
-                        AddBone();
-                    }
                 }
             }));
+    }
+
+    private IEnumerator AddBoneRoutine()
+    {
+        Debug.Log($"{_tailIndex}    {cycleNumber}");
+        for (int i = 0; i < _tailIndex; i++)
+        {
+            AddBone();
+            yield return new WaitForSeconds(0.3f);
+        }
     }
 }
