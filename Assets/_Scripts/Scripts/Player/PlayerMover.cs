@@ -108,7 +108,7 @@ public class PlayerMover : MonoBehaviour
         if (moveDirection != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            rotatableHead.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.fixedDeltaTime * 10);
+            rotatableHead.rotation = targetRotation;
         }
     }
 

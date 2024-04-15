@@ -14,8 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerRuntimeStats _stats;
     [SerializeField] private Transform rayPoint;
     [SerializeField] private PlayerPartsIncreaser increasere;
-    
-    
+    [SerializeField] private SnakeTail snakeTail;
+
+
     private float _currentHealth;
     private PlayerMover _playerMover;
     private PlayerJumpMover _playerJump;
@@ -23,8 +24,9 @@ public class Player : MonoBehaviour
     private PlayerSkinSwitcher _skinSwitcher;
     private bool _isJumping;
     private bool _movementBlocked;
-    
-    public event Action<float,float> HealthChanged;
+    private float _lastLevel;
+
+    public event Action<float, float> HealthChanged;
     public event Action Died;
     public float Health => _currentHealth;
     public float MaxHealth => _maxHealth;
@@ -48,7 +50,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.TryGetComponent(out IEatable food))
             _collisionHandler.HandleFoodCollision(this, food);
         else if (other.gameObject.TryGetComponent(out ILine line))
-            _collisionHandler.HandleLineTrigger(this, line); 
+            _collisionHandler.HandleLineTrigger(this, line);
         if (other.gameObject.TryGetComponent(out IObstacle obstacle))
             _collisionHandler.HandleObstacleCollision(this, obstacle);
         else if (other.gameObject.TryGetComponent(out IEnemy enemy))
@@ -90,7 +92,7 @@ public class Player : MonoBehaviour
         // Debug.DrawRay(rayPoint.position, Vector3.forward,Color.cyan);
         if (Physics.Raycast(ray, out hit, 2))
         {
-            if ( hit.collider.gameObject.GetComponent<Burger>())
+            if (hit.collider.gameObject.GetComponent<Burger>())
                 _playerAnimator.OpenMouth();
         }
         else _playerAnimator.CloseMouth();
@@ -125,13 +127,16 @@ public class Player : MonoBehaviour
         _movementBlocked = false;
         if (_isJumping) _isJumping = false;
     }
-    
-    public void TryApplyDamage(float damage)
+
+    public void TryApplyDamage(float damage, bool animated = true)
     {
         if (damage > 0)
         {
             if (_currentHealth >= damage)
-                ApplyDamage(damage);
+            {
+                
+                ApplyDamage(damage,animated);
+            }
             else
                 ResetHealth(0);
         }
@@ -139,8 +144,8 @@ public class Player : MonoBehaviour
         {
             damage *= -1;
             var difference = _maxHealth - _currentHealth;
-            if(difference >= damage)
-                ApplyDamage(-damage);
+            if (difference >= damage)
+                ApplyDamage(-damage,animated);
             else
                 ResetHealth(_maxHealth);
         }
@@ -157,28 +162,31 @@ public class Player : MonoBehaviour
     {
         _currentHealth = value;
         _stats.SetHealth(value);
-        HealthChanged?.Invoke(_currentHealth,_maxHealth);
+        HealthChanged?.Invoke(_currentHealth, _maxHealth);
     }
 
-    private void ApplyDamage(float damage)
+    private void ApplyDamage(float damage,bool isAnimated = true)
     {
         _currentHealth -= damage;
         _stats.ReduceHealth(damage);
-        HealthChanged?.Invoke(_currentHealth,_maxHealth);
+        HealthChanged?.Invoke(_currentHealth, _maxHealth);
+        var levelDifference = _currentHealth - _lastLevel;
+        snakeTail.ChaneTailScale(levelDifference, (int)levelDifference, isAnimated);
+        _lastLevel = _currentHealth;
     }
 
     private void FixedUpdate()
     {
-        if(!_movementBlocked)
+        if (!_movementBlocked)
             _playerMover.TryMove();
 
         if (Input.GetKeyDown(KeyCode.H))
             Debug.Log("Current health = " + _currentHealth);
     }
 
-    public Tween DoMove(Vector3 target,float moveDuration)
+    public Tween DoMove(Vector3 target, float moveDuration)
     {
-       return _playerMover.MoveTo(target,moveDuration);
+        return _playerMover.MoveTo(target, moveDuration);
     }
 
     public void JumpTo(Transform jumpTarget)
@@ -199,7 +207,6 @@ public class Player : MonoBehaviour
             _currentHealth += value;
             _stats.AddHealth(value);
         }
-            
     }
 
     public void FallInToPit()

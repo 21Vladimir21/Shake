@@ -67,7 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d369ec75ba4685bac210fbe945da14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _runningSpeed: 700
+  rotatableHead: {fileID: 0}
+  _runningSpeed: 350
   _runningBeamSpeed: 300
   _horizontalSpeed: 2400
   _jumpPower: 4
@@ -96,7 +97,9 @@ MonoBehaviour:
   _maxHealth: 150
   _playerAnimator: {fileID: 3358607029276331742}
   _stats: {fileID: 11400000, guid: b2547152f71df224c9a5eadff824a8b2, type: 2}
-  _jumpSound: {fileID: 8300000, guid: 3ca21e9b4fc83ff48afabf19637354fb, type: 3}
+  rayPoint: {fileID: 0}
+  increasere: {fileID: 0}
+  snakeTail: {fileID: 0}
 --- !u!114 &7600276938620707926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,8 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0641f9f257d74eff8158d29312b60bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxBlendShapeValue: 70
-  _meshRenderer: {fileID: 137933868906083924}
+  scaleBody: {fileID: 0}
+  levelText: {fileID: 0}
+  snakeTail: {fileID: 0}
 --- !u!54 &7600276938620707928
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -216,9 +220,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 95977411410575981}
-  _rigidbody: {fileID: 7600276938620707928}
-  _playerMover: {fileID: 7600276938620707930}
-  _animationState: 1
 --- !u!114 &3564433355154931869
 MonoBehaviour:
   m_ObjectHideFlags: 0

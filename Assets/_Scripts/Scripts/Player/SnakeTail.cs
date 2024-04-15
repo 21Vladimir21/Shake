@@ -11,12 +11,13 @@ public class SnakeTail : MonoBehaviour
     [SerializeField] private Transform bonePrefab;
     [SerializeField] private Transform tailPivot;
     [SerializeField] private SplineComputer splineComputer;
+    [SerializeField] private TubeGenerator tubeGenerator;
+
     [SerializeField] private float space;
     [SerializeField] private float boneScale;
     [Range(0, 100), SerializeField] private int startBoneCount = 4;
 
     private List<Transform> _snakeBones = new();
-    private List<Vector3> _points = new();
 
 
     private Vector3 _lastPosition;
@@ -43,6 +44,7 @@ public class SnakeTail : MonoBehaviour
 
     private void DirectionTailMoving2()
     {
+        tubeGenerator.sizeModifier.keys[0].size = -(boneScale - 0.05f);
         if (Vector3.Distance(tailPivot.position, _lastPosition) > 0.01f)
         {
             for (int i = 0; i < _snakeBones.Count; i++)
@@ -85,20 +87,26 @@ public class SnakeTail : MonoBehaviour
         _lastPosition = tailPivot.position;
     }
 
-    public void ChaneTailScale(float newScale)
+
+    public void ChaneTailScale(float newScale, int newIndex, bool isAnimated)
     {
-        
+        _tailIndex = newIndex;
         foreach (var bone in _snakeBones) bone.localScale += Vector3.one * newScale * 0.015f;
         boneScale = _snakeBones[0].localScale.x;
-        BoneScale(0);
+        if (isAnimated) BoneScale(0);
+        else
+        {
+            for (int i = 0; i < _tailIndex; i++)
+            {
+                AddBone();
+            }
+        }
     }
 
     private void AddBone(int index)
     {
         var bone = Instantiate(bonePrefab, tailPivot.position + Vector3.back.normalized * space * index,
             Quaternion.identity);
-
-        
 
         bone.localScale = Vector3.one * boneScale;
 
@@ -120,6 +128,7 @@ public class SnakeTail : MonoBehaviour
     }
 
     int cycleNumber = 0;
+    private int _tailIndex;
 
     private void BoneScale(int boneNumber)
     {
@@ -128,16 +137,20 @@ public class SnakeTail : MonoBehaviour
         seq.AppendInterval(0.2f).AppendCallback(() =>
         {
             boneNumber++;
+            if (boneNumber == _snakeBones.Count - 1) return;
             BoneScale(boneNumber);
         }).Insert(0,
             _snakeBones[boneNumber].DOScale(Vector3.one * (boneScale * 2), scaleDuration)).Insert(0.5f,
             _snakeBones[boneNumber].DOScale(Vector3.one * boneScale, scaleDuration).OnComplete(() =>
             {
                 cycleNumber++;
-                if (cycleNumber == _snakeBones.Count)
+                if (cycleNumber == _snakeBones.Count - 1)
                 {
                     cycleNumber = 0;
-                    AddBone();
+                    for (int i = 0; i < _tailIndex; i++)
+                    {
+                        AddBone();
+                    }
                 }
             }));
     }

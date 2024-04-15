@@ -14,7 +14,7 @@ public class Fence : MonoBehaviour, IObstacle
     public void AffectPlayer(Player player)
     {
         if (enabled== false) return;
-        player.TryApplyDamage(_fenceDamage);
+        player.TryApplyDamage(_fenceDamage,false);
         player.Push(_pushPower);
         SoundManager.Instance.PlaySound(_hitSound);
     }

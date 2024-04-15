@@ -37,8 +37,8 @@ public class PlayerPartsIncreaser : MonoBehaviour
         var levelDifference = currentHealth - _lastLevel;
         GameManager.Instance.ChangeSliderValue(Mathf.Lerp(0, 1, currentHealth / maxHealth));
             scaleBody.localScale += Vector3.one * (levelDifference * 0.05f);
-            
-            snakeTail.ChaneTailScale(levelDifference );
+        //     
+        //     snakeTail.ChaneTailScale(levelDifference,(int)currentHealth,true );
         _lastLevel = currentHealth;
     }
     

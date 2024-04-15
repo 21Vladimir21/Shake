@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,12 +17,12 @@ namespace DefaultNamespace.EnemySnake
         [SerializeField] private TMP_Text levelText;
         [SerializeField] private Image backgroundImage;
         [SerializeField] private GameObject materialsObject;
+        [SerializeField] private MeshRenderer tailMesh;
 
-        
-        [SerializeField] private Burger burger;
-        [SerializeField] private Fence fence;
-        
-        
+
+        [SerializeField] private List<Burger> burger;
+        [SerializeField] private List<Fence> fence;
+
 
         private Material _clonedMaterial;
 
@@ -41,6 +42,18 @@ namespace DefaultNamespace.EnemySnake
                 materials[1] = _clonedMaterial;
 
                 renderer.materials = materials;
+                tailMesh.material = _clonedMaterial;
+            }
+        }
+
+        public void SetParts(List<Transform> parts)
+        {
+            foreach (var part in parts)
+            {
+                part.TryGetComponent(out Burger bur);
+                part.TryGetComponent(out Fence fen);
+                burger.Add(bur);
+                fence.Add(fen);
             }
         }
 
@@ -56,16 +69,17 @@ namespace DefaultNamespace.EnemySnake
         {
             _clonedMaterial.mainTexture = canEat;
             backgroundImage.color = canEatColor;
-            burger.enabled = true;
-            fence.enabled = false;
+
+            foreach (var burg in burger) burg.enabled = true;
+            foreach (var fen in fence) fen.enabled = false;
         }
 
         private void SetNotCanEat()
         {
             _clonedMaterial.mainTexture = notCanEat;
             backgroundImage.color = notCanEatColor;
-            burger.enabled = false;
-            fence.enabled = true;
+            foreach (var burg in burger) burg.enabled = false;
+            foreach (var fen in fence) fen.enabled = true;
         }
     }
 }

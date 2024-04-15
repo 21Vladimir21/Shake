@@ -19,6 +19,7 @@ public class PlayerInput : MonoBehaviour
 
     private void HandleInput()
     {
+            _movementDirection = Vector3.zero;
         if (Input.GetAxis("Horizontal") != 0)
         {
             _movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
@@ -37,7 +38,7 @@ public class PlayerInput : MonoBehaviour
                 return;
             float dragDelta = Input.mousePosition.x - _dragStartPosition.x;
             _movementDirection = new Vector3(dragDelta * InputSensMultiplier, 0f, 0f);
-            _dragStartPosition.x = Mathf.Lerp(_dragStartPosition.x, Input.mousePosition.x, 3f * Time.deltaTime);
+            // _dragStartPosition.x = Mathf.Lerp(_dragStartPosition.x, Input.mousePosition.x, 3f * Time.deltaTime);
         }
         
         if (Input.GetMouseButtonUp(0))
